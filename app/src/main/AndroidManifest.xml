@@ -21,4 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity 
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.FindIdActivity" />
+        <activity android:name=".activity.FindPwActivity" />
+        <activity android:name=".activity.Regi
