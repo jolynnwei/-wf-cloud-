@@ -25,4 +25,8 @@
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.FindIdActivity" />
         <activity android:name=".activity.FindPwActivity" />
-        <activity android:name=".activity.Regi
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.ProfileActivity" />
+        <activity android:name=".activity.ModifyProfileActivity" />
+        <activity android:name=".activity.FilterActivity" />
+        <activity android:name=".activity.ChatRoomAct
