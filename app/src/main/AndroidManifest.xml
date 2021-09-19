@@ -29,4 +29,9 @@
         <activity android:name=".activity.ProfileActivity" />
         <activity android:name=".activity.ModifyProfileActivity" />
         <activity android:name=".activity.FilterActivity" />
-        <activity android:name=".activity.ChatRoomAct
+        <activity android:name=".activity.ChatRoomActivity" />
+        <activity android:name=".activity.ImageActivity"/>
+
+    </application>
+
+</manifest>
