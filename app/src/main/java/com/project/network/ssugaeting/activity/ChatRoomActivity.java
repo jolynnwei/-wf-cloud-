@@ -174,3 +174,267 @@ public class ChatRoomActivity extends AppCompatActivity {
                 String msg = binding.etInputMsg.getText().toString();
                 String time = getMsgSendTime();
                 chatRoom.getChatList().add(new Chat(msg, null, time, MY_TURN));
+                chatAdapter.notifyDataSetChanged();
+                binding.rvChatList.scrollToPosition(chatRoom.getChatList().size() - 1);
+                binding.etInputMsg.setText(null);
+
+                StringBuffer sendMsgSb = new StringBuffer();
+                sendMsgSb.append(SEND_MSG).append("$");
+                sendMsgSb.append(myId).append("$");
+                sendMsgSb.append(oppId).append("$");
+                sendMsgSb.append(msg).append("$");
+                sendMsgSb.append(" ").append("$");
+                sendMsgSb.append(time);
+                SendMsgTask mSendMsgTask = new SendMsgTask(sendMsgSb.toString());
+                mSendMsgTask.execute();
+            }
+        });
+
+        binding.ivSendImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                intent.setType("image/*");
+                startActivityForResult(Intent.createChooser(intent, "전송할 사진을 선택하세요."), IMAGE_REQUEST_CODE);
+            }
+        });
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == IMAGE_REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
+            final Uri filePathURI = data.getData();
+            final String imageURI = filePathURI.toString();
+            final String time = getMsgSendTime();
+            chatAdapter.notifyDataSetChanged();
+            binding.rvChatList.scrollToPosition(chatRoom.getChatList().size() - 1);
+            getImageNameToUri(filePathURI);
+            imgFile = new File(mImgPath);
+            // upload to ftp
+            FtpUploadTask mFtpUploadTask = new FtpUploadTask(imageURI, time);
+            mFtpUploadTask.execute();
+
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        isRunThread = false;
+        if (chatRoom.getChatList().size() > 2) {
+            chatRoom.getChatList().remove(1);
+            saveChatsToFile();
+        }
+        Intent intent = new Intent(ChatRoomActivity.this, MainActivity.class);
+        intent.putExtra("position", 1);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
+
+    private String getMsgSendTime() {
+        String currentTime;
+        Date date = new Date();
+        if (date.getHours() < 12)
+            currentTime = "오전 " + date.getHours() + ":" + String.format("%02d", date.getMinutes());
+        else {
+            if (date.getHours() == 12)
+                currentTime = "오후 " + date.getHours() + ":" + String.format("%02d", date.getMinutes());
+            else
+                currentTime = "오후 " + (date.getHours() - 12) + ":" + String.format("%02d", date.getMinutes());
+        }
+        return currentTime;
+    }
+
+    private void setShowDate() {
+        if (chatList.isEmpty())
+            chatList.add(new Chat(null, null, getDate(), DATE_TURN));
+        else {
+
+            for (Chat c : chatList)
+                if (c.getMsgTime().equals(getDate()))
+                    return;
+            chatList.add(new Chat(null, null, getDate(), DATE_TURN));
+        }
+    }
+
+    private String getDate() {
+        String retDate;
+        Date date = new Date();
+        SimpleDateFormat formatType = new SimpleDateFormat("yyyy년 MM월 dd일 ");
+        retDate = formatType.format(date);
+        Calendar cal = Calendar.getInstance();
+        int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK) - 1;
+        retDate += DAY_OF_WEEK[dayOfWeek];
+        return retDate;
+    }
+
+
+    private void saveChatsToFile() {
+        try {
+            FileOutputStream fos = new FileOutputStream(chatsFile, false);
+            ObjectOutputStream os = new ObjectOutputStream(new BufferedOutputStream(fos));
+            Log.d("chatList.size", chatList.size() + "");
+            for (Chat chat : chatList) {
+                os.writeObject(chat);
+            }
+            os.flush();
+            os.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void loadChatsFromFile() {
+        if (!chatsFile.exists()) {
+            Log.d(TAG, "File of chats is not exist");
+            return;
+        }
+        try {
+            FileInputStream fis = new FileInputStream(chatsFile);
+            ObjectInputStream in = new ObjectInputStream(new BufferedInputStream(fis));
+
+            chatList.clear();
+            while (true) {
+                Chat mChat = (Chat) in.readObject();
+                if (mChat == null)
+                    break;
+                chatList.add(mChat);
+            }
+            chatRoom.setChatList(chatList);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // URI 정보를 이용하여 사진 정보 가져온다
+    private void getImageNameToUri(Uri data) {
+        String[] proj = {
+                MediaStore.Images.Media.DATA,
+                MediaStore.Images.Media.TITLE,
+                MediaStore.Images.Media.ORIENTATION
+        };
+
+        Cursor cursor = this.getContentResolver().query(data, proj, null, null, null);
+        cursor.moveToFirst();
+        int column_data = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+        int column_title = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.TITLE);
+        int column_orientation = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.ORIENTATION);
+
+        mImgPath = cursor.getString(column_data);
+        mImgTitle = cursor.getString(column_title);
+        mImgOrient = cursor.getString(column_orientation);
+    }
+
+    private class FtpUploadTask extends AsyncTask<Void, Void, String> {
+        private String imageURI;
+        private String time;
+
+        public FtpUploadTask(String imageURI, String time) {
+            this.imageURI = imageURI;
+            this.time = time;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            chatRoom.getChatList().add(new Chat(null, currentPath, time, MY_TURN));
+            chatAdapter.notifyDataSetChanged();
+            binding.rvChatList.scrollToPosition(chatRoom.getChatList().size() - 1);
+            ftpConnection.ftpDisconnect();
+
+            StringBuffer sendImgSb = new StringBuffer();
+            sendImgSb.append(SEND_IMAGE).append("$");
+            sendImgSb.append(myId).append("$");
+            sendImgSb.append(oppId).append("$");
+            sendImgSb.append(" ").append("$");
+            sendImgSb.append(currentPath).append("$");
+            sendImgSb.append(time);
+            SendMsgTask mSendMsgTask = new SendMsgTask(sendImgSb.toString());
+            mSendMsgTask.execute();
+            super.onPostExecute(result);
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            ftpStatus = ftpConnection.ftpConnect();
+            if (ftpStatus)
+                Log.d(TAG, "FTP 연결 성공");
+            else
+                Log.d(TAG, "FTP 연결 실패");
+            ftpConnection.ftpChangeDirectory("msg/");
+            ftpConnection.ftpUploadFile(imgFile, imageURI);
+            currentPath = ftpConnection.ftpGetDirectory();
+            currentPath += "/" + mImgTitle + ".jpg";
+            Log.d("FTP 이미지 업로드", currentPath);
+            return "";
+        }
+    }
+
+    private class SendMsgTask extends AsyncTask<Void, Void, String> {
+        private String values;
+
+        public SendMsgTask(String values) {
+            this.values = values;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            super.onPostExecute(result);
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            String result; // 요청 결과를 저장할 변수.
+            RequestHttpURLConnection requestHttpURLConnection = new RequestHttpURLConnection();
+            result = requestHttpURLConnection.request(values);
+            int idx = result.indexOf("&");
+            result = result.substring(0, idx);
+            return result;
+        }
+    }
+
+    private class RecvMsgTask extends AsyncTask<Void, Void, String> {
+        private String values;
+
+        public RecvMsgTask(String values) {
+            this.values = values;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            if (result.equals("FAIL")) {
+                return;
+            } else if (result == null) {
+                return;
+            } else {
+                StringTokenizer msgTokenizer = new StringTokenizer(result, "$");
+                final String msg = msgTokenizer.nextToken();
+                final String ftpPath = msgTokenizer.nextToken();
+                final String time = msgTokenizer.nextToken();
+                if (ftpPath.equals(" "))
+                    chatRoom.getChatList().add(new Chat(msg, null, time, OPPONENT_TURN));
+                else if (msg.equals(" ")) {
+                    final Thread ftpThread = new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            String imgURI;
