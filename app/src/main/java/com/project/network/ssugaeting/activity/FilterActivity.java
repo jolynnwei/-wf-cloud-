@@ -208,3 +208,88 @@ public class FilterActivity extends AppCompatActivity {
         binding.spFilterMilitaryStatus.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                fltMltrStat = militaryStatusArray[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                fltMltrStat = militaryStatusArray[0];
+
+            }
+        });
+    }
+
+    private class FilterInfoTask extends AsyncTask<Void, Void, String> {
+        private String values;
+
+        public FilterInfoTask(String values) {
+            this.values = values;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            progressDialog = ProgressDialog.show(getLayoutInflater().getContext(), "Connecting Server", "Please wait...", false, false);
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            progressDialog.dismiss();
+            if (result.equals("FAIL")) {
+                Toast.makeText(getApplicationContext(), "해당하는 상대방이 존재하지 않습니다,", Toast.LENGTH_LONG).show();
+                return;
+            }
+            StringTokenizer profileTokenizer = new StringTokenizer(result, "|");
+            while (profileTokenizer.hasMoreTokens()) {
+                String proInfo = profileTokenizer.nextToken();
+                StringTokenizer infoTokenizer = new StringTokenizer(proInfo, "$");
+                String id = infoTokenizer.nextToken();
+                String password = infoTokenizer.nextToken();
+                String email = infoTokenizer.nextToken();
+                String name = infoTokenizer.nextToken();
+                String sex = infoTokenizer.nextToken();
+                String stateMsg = infoTokenizer.nextToken();
+                String age = infoTokenizer.nextToken();
+                String height = infoTokenizer.nextToken();
+                String address = infoTokenizer.nextToken();
+                String hobby = infoTokenizer.nextToken();
+                String college = infoTokenizer.nextToken();
+                String major = infoTokenizer.nextToken();
+                String imageURI = infoTokenizer.nextToken();
+                String religion = infoTokenizer.nextToken();
+                String circle = infoTokenizer.nextToken();
+                String abroadExperience = infoTokenizer.nextToken();
+                String militaryStatus = infoTokenizer.nextToken();
+                Profile fltProfile = new Profile(id, password, email, name, sex, stateMsg, age, height,
+                        address, hobby, college, major, imageURI, religion, circle, abroadExperience, militaryStatus);
+                filteredProfileList.add(fltProfile);
+            }
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            intent.putParcelableArrayListExtra("FILTERED_PROFILES", filteredProfileList);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish();
+            super.onPostExecute(result);
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            String result; // 요청 결과를 저장할 변수.
+            RequestHttpURLConnection requestHttpURLConnection = new RequestHttpURLConnection();
+            result = requestHttpURLConnection.request(values);
+            Log.d("result", result);
+            int idx = result.indexOf("&");
+            result = result.substring(0, idx);
+            return result;
+        }
+    }
+
+    private void setNone() {
+        if (fltReligion.equals("상관없음")) fltReligion = "none";
+        if (fltHobby.equals("상관없음")) fltHobby = "none";
+        if (fltCollege.equals("상관없음")) fltCollege = "none";
+        if (fltCircle.equals("상관없음")) fltCircle = "none";
+        if (fltAbrdExp.equals("상관없음")) fltAbrdExp = "none";
+        if (fltMltrStat.equals("상관없음")) fltMltrStat = "none";
+    }
+}
