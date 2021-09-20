@@ -438,3 +438,39 @@ public class ChatRoomActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             String imgURI;
+                            ftpStatus = ftpConnection.ftpConnect();
+                            if (ftpStatus)
+                                Log.d(TAG, "FTP 연결 성공");
+                            else
+                                Log.d(TAG, "FTP 연결 실패");
+                            ftpConnection.ftpChangeDirectory("msg/");
+                            int idx = ftpPath.indexOf("msg/");
+                            String title = ftpPath.substring(idx, ftpPath.length());
+                            imgURI = DIRECTORY_PATH + "/chat";
+                            imgURI += "/" + title;
+                            ftpConnection.ftpDownloadFile(ftpPath, imgURI);
+                            chatRoom.getChatList().add(new Chat(null, imgURI, time, OPPONENT_TURN));
+                            ftpConnection.ftpDisconnect();
+                        }
+                    });
+                    ftpThread.start();
+                }
+                chatAdapter.notifyDataSetChanged();
+                binding.rvChatList.scrollToPosition(chatRoom.getChatList().size() - 1);
+            }
+            super.onPostExecute(result);
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            String result; // 요청 결과를 저장할 변수.
+            RequestHttpURLConnection requestHttpURLConnection = new RequestHttpURLConnection();
+            result = requestHttpURLConnection.request(values);
+            if (result != null) {
+                int idx = result.indexOf("&");
+                result = result.substring(0, idx);
+            }
+            return result;
+        }
+    }
+}
