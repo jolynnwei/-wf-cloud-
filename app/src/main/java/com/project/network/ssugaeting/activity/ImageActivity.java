@@ -18,4 +18,7 @@ public class ImageActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInsta
+        super.onCreate(savedInstanceState);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_image);
+        final String imageURI = getIntent().getStringExtra("SELECTED_IMAGE");
+        Picasso.with(this).load(imageURI).resize(1080, 1080).into(bindin
