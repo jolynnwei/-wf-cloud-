@@ -9,4 +9,13 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.project.network.ssugaeting.R;
 import com.project.network.ssugaeting.databinding.ActivityImageBinding;
-import com.squa
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.Picasso;
+
+public class ImageActivity extends AppCompatActivity {
+
+    ActivityImageBinding binding;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInsta
