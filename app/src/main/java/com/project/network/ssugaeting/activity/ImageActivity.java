@@ -21,4 +21,12 @@ public class ImageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_image);
         final String imageURI = getIntent().getStringExtra("SELECTED_IMAGE");
-        Picasso.with(this).load(imageURI).resize(1080, 1080).into(bindin
+        Picasso.with(this).load(imageURI).resize(1080, 1080).into(binding.ivFullScreenImage);
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+}
