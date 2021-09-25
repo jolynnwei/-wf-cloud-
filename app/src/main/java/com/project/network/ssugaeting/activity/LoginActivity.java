@@ -9,4 +9,10 @@ import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import
+import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
+
+import com.project.network.ssugaeting.R;
+import com.project.network.ssugaeting.databinding.ActivityLoginBinding;
+import com.project.network.ssugaeting.http_connect.
