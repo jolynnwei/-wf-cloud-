@@ -30,4 +30,11 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate
+        super.onCreate(savedInstanceState);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
+
+        if (SaveSharedPreference.getMyProfile() == null) {
+            // after connect server
+        }
+
+        binding.tvRegister.setOnClickListen
