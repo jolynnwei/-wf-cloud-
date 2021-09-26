@@ -21,4 +21,13 @@ import com.project.network.ssugaeting.shared_preference.SaveSharedPreference;
 
 import java.util.StringTokenizer;
 
-public class LoginActivit
+public class LoginActivity extends AppCompatActivity {
+    private static final int ID_LOGIN = 2;
+
+    ActivityLoginBinding binding;
+    Profile mProfile;
+    ProgressDialog progressDialog;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate
