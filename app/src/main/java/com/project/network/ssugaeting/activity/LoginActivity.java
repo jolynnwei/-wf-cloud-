@@ -37,4 +37,8 @@ public class LoginActivity extends AppCompatActivity {
             // after connect server
         }
 
-        binding.tvRegister.setOnClickListen
+        binding.tvRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
