@@ -56,4 +56,9 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         binding.tvFindPw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), FindPwActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
  
