@@ -72,4 +72,9 @@ public class LoginActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            String id = 
+            String id = binding.etInputId.getText().toString();
+            if(id.equals("")) {
+                Toast.makeText(getApplicationContext(), "아이디를 입력해주세요.", Toast.LENGTH_LONG).show();
+                return;
+            }
+            String password = bind
