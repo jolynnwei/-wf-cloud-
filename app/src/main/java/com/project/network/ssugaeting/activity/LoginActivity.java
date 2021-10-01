@@ -61,4 +61,15 @@ public class LoginActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), FindPwActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
- 
+            }
+        });
+
+        binding.btnLogin.setOnClickListener(new LoginClickListener());
+
+    }
+
+    private class LoginClickListener implements View.OnClickListener {
+
+        @Override
+        public void onClick(View v) {
+            String id = 
