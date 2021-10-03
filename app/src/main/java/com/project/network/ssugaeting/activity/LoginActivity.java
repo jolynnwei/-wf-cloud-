@@ -77,4 +77,10 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "아이디를 입력해주세요.", Toast.LENGTH_LONG).show();
                 return;
             }
-            String password = bind
+            String password = binding.etInputPw.getText().toString();
+            if(password.equals("")) {
+                Toast.makeText(getApplicationContext(), "비밀번호를 입력해주세요.", Toast.LENGTH_LONG).show();
+                return;
+            }
+
+            StringBuffer loginSb =
