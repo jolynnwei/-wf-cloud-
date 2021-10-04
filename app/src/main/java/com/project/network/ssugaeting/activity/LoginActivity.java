@@ -83,4 +83,10 @@ public class LoginActivity extends AppCompatActivity {
                 return;
             }
 
-            StringBuffer loginSb =
+            StringBuffer loginSb = new StringBuffer();
+            loginSb.append(ID_LOGIN).append("$");
+            loginSb.append(id).append("$");
+            loginSb.append(password);
+            LoginTask mLoginTask = new LoginTask(loginSb.toString());
+            mLoginTask.execute();
+ 
