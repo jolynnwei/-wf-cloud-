@@ -89,4 +89,10 @@ public class LoginActivity extends AppCompatActivity {
             loginSb.append(password);
             LoginTask mLoginTask = new LoginTask(loginSb.toString());
             mLoginTask.execute();
- 
+        }
+    }
+
+    private void setProfileByMessage(String requestMessage) {
+        StringTokenizer tokenizer = new StringTokenizer(requestMessage, "$");
+        String id = tokenizer.nextToken();
+        String p
