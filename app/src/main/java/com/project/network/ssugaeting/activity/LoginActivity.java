@@ -95,4 +95,9 @@ public class LoginActivity extends AppCompatActivity {
     private void setProfileByMessage(String requestMessage) {
         StringTokenizer tokenizer = new StringTokenizer(requestMessage, "$");
         String id = tokenizer.nextToken();
-        String p
+        String password = tokenizer.nextToken();
+        String email = tokenizer.nextToken();
+        String name = tokenizer.nextToken();
+        String sex = tokenizer.nextToken();
+        String stateMsg = tokenizer.nextToken();
+        String age = tokenizer.nextToken(
