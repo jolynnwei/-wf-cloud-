@@ -105,4 +105,9 @@ public class LoginActivity extends AppCompatActivity {
         String address = tokenizer.nextToken();
         String hobby = tokenizer.nextToken();
         String college = tokenizer.nextToken();
-        String major = tokenizer.next
+        String major = tokenizer.nextToken();
+        String imageURI = tokenizer.nextToken();
+        String religion = tokenizer.nextToken();
+        String circle = tokenizer.nextToken();
+        String abroadExperience = tokenizer.nextToken();
+        String militaryStatus = tokenizer.
