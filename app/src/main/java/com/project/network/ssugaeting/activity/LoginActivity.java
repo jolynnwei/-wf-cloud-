@@ -100,4 +100,9 @@ public class LoginActivity extends AppCompatActivity {
         String name = tokenizer.nextToken();
         String sex = tokenizer.nextToken();
         String stateMsg = tokenizer.nextToken();
-        String age = tokenizer.nextToken(
+        String age = tokenizer.nextToken();
+        String height = tokenizer.nextToken();
+        String address = tokenizer.nextToken();
+        String hobby = tokenizer.nextToken();
+        String college = tokenizer.nextToken();
+        String major = tokenizer.next
