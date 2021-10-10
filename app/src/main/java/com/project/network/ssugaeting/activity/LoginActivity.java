@@ -115,4 +115,13 @@ public class LoginActivity extends AppCompatActivity {
                 address, hobby, college, major, imageURI, religion, circle, abroadExperience, militaryStatus);
     }
 
-    private class LoginTask extends AsyncTask
+    private class LoginTask extends AsyncTask<Void, Void, String> {
+        private String values;
+
+        public LoginTask(String values) {
+            this.values = values;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            progressDialog = ProgressDialog.show(getLayoutInflater().getContex
