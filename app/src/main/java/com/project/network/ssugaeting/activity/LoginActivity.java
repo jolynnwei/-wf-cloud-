@@ -110,4 +110,9 @@ public class LoginActivity extends AppCompatActivity {
         String religion = tokenizer.nextToken();
         String circle = tokenizer.nextToken();
         String abroadExperience = tokenizer.nextToken();
-        String militaryStatus = tokenizer.
+        String militaryStatus = tokenizer.nextToken();
+        mProfile = new Profile(id, password, email, name, sex, stateMsg, age, height,
+                address, hobby, college, major, imageURI, religion, circle, abroadExperience, militaryStatus);
+    }
+
+    private class LoginTask extends AsyncTask
