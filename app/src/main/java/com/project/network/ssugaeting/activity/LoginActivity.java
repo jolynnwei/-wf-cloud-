@@ -124,4 +124,10 @@ public class LoginActivity extends AppCompatActivity {
 
         @Override
         protected void onPreExecute() {
-            progressDialog = ProgressDialog.show(getLayoutInflater().getContex
+            progressDialog = ProgressDialog.show(getLayoutInflater().getContext(), "Connecting Server", "Please wait...", false, false);
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            progressDialog.dismiss();
