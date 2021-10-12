@@ -135,4 +135,8 @@ public class LoginActivity extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                 builder.setTitle("오류");
                 builder.setMessage("존재하지 않는 아이디이거나 비밀번호가 일치하지 않습니다.");
-        
+                builder.setPositiveButton("OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
