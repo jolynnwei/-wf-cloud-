@@ -140,3 +140,9 @@ public class LoginActivity extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.dismiss();
                             }
+                        });
+                builder.show();
+            } else {
+                setProfileByMessage(result);
+                SaveSharedPreference.setMyProfile(mProfile);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class)
