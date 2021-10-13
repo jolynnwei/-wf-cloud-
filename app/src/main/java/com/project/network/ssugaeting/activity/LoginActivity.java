@@ -145,4 +145,14 @@ public class LoginActivity extends AppCompatActivity {
             } else {
                 setProfileByMessage(result);
                 SaveSharedPreference.setMyProfile(mProfile);
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class)
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
+            }
+            super.onPostExecute(result);
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+     
