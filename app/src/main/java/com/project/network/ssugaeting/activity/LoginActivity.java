@@ -155,4 +155,8 @@ public class LoginActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(Void... voids) {
-     
+            String result; // 요청 결과를 저장할 변수.
+            RequestHttpURLConnection requestHttpURLConnection = new RequestHttpURLConnection();
+            result = requestHttpURLConnection.request(values);
+            int idx = result.indexOf("&");
+            r
