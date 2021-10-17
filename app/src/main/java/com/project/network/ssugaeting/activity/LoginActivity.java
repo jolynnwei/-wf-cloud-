@@ -159,4 +159,8 @@ public class LoginActivity extends AppCompatActivity {
             RequestHttpURLConnection requestHttpURLConnection = new RequestHttpURLConnection();
             result = requestHttpURLConnection.request(values);
             int idx = result.indexOf("&");
-            r
+            result = result.substring(0, idx);
+            return result;
+        }
+    }
+}
