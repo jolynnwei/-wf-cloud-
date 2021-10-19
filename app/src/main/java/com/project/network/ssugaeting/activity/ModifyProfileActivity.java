@@ -22,4 +22,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Gallery;
 import android.widget.Toast;
 
-import com.project.netwo
+import com.project.network.ssugaeting.R;
+import com.project.network.ssugaeting.databinding.ActivityProfileModifyBinding;
+import com.project.network.ssugaeting.databinding.ItemChatBinding;
+import com.project.network.ssugaeting.ftp.FTPConnection;
+import com.project.network.ssugaeting.http_con
