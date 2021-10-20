@@ -26,4 +26,11 @@ import com.project.network.ssugaeting.R;
 import com.project.network.ssugaeting.databinding.ActivityProfileModifyBinding;
 import com.project.network.ssugaeting.databinding.ItemChatBinding;
 import com.project.network.ssugaeting.ftp.FTPConnection;
-import com.project.network.ssugaeting.http_con
+import com.project.network.ssugaeting.http_connect.RequestHttpURLConnection;
+import com.project.network.ssugaeting.item.Profile;
+import com.project.network.ssugaeting.shared_preference.SaveSharedPreference;
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.LruCache;
+import com.squareup.picasso.Picasso;
+
+im
