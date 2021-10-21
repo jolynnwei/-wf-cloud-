@@ -39,4 +39,9 @@ import java.io.IOException;
 import static com.project.network.ssugaeting.activity.MainActivity.DIRECTORY_PATH;
 import static com.project.network.ssugaeting.activity.MainActivity.FTP_PATH;
 
-public class ModifyProfileActivity extends AppCompatActivity
+public class ModifyProfileActivity extends AppCompatActivity {
+    private static final char MODIFY_PROFILE = 'c';
+    private static final int IMAGE_REQUEST_CODE = 1001;
+    private static final String TAG = "ModifyProfileActivity";
+
+    final String[] religionArray = {"미선택", "기독교", "천주교", "불교",
