@@ -44,4 +44,8 @@ public class ModifyProfileActivity extends AppCompatActivity {
     private static final int IMAGE_REQUEST_CODE = 1001;
     private static final String TAG = "ModifyProfileActivity";
 
-    final String[] religionArray = {"미선택", "기독교", "천주교", "불교",
+    final String[] religionArray = {"미선택", "기독교", "천주교", "불교", "원불교", "무교"};
+    final String[] hobbyArray = {"미선택", "독서", "운동", "게임", "영화", "음악",
+            "악기연주", "드라마", "프로그래밍", "드라이브", "카페",
+            "맛집탐방", "외국어", "사진", "봉사", "요리", "그림"};
+    final String[] collegeArray = {"미선택", "인문대학", "자연과학대학", "법과대학", "사회과학대학",
