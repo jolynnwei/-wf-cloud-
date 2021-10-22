@@ -49,3 +49,8 @@ public class ModifyProfileActivity extends AppCompatActivity {
             "악기연주", "드라마", "프로그래밍", "드라이브", "카페",
             "맛집탐방", "외국어", "사진", "봉사", "요리", "그림"};
     final String[] collegeArray = {"미선택", "인문대학", "자연과학대학", "법과대학", "사회과학대학",
+            "경제통상대학", "경영대학", "공과대학", "IT대학"};
+    final String[] circleArray = {"미선택", "학생회", "운동", "미술", "음악",
+            "토론", "방송", "사진", "과학", "신문",
+            "종교", "봉사", "학술", "친목", "외국어"};
+    final String[] militaryStatusArray = {"미선택", "군필", "미필", "해당없음"};
