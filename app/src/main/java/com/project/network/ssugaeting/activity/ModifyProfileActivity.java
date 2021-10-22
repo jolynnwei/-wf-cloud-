@@ -54,3 +54,10 @@ public class ModifyProfileActivity extends AppCompatActivity {
             "토론", "방송", "사진", "과학", "신문",
             "종교", "봉사", "학술", "친목", "외국어"};
     final String[] militaryStatusArray = {"미선택", "군필", "미필", "해당없음"};
+    final String[] abroadExperienceArray = {"미선택", "영어권", "비영어권", "경험없음"};
+
+    FTPConnection ftpConnection = new FTPConnection();
+    ActivityProfileModifyBinding binding;
+    Profile mProfile;
+    int[] selectedPosArray = new int[6];
+ 
