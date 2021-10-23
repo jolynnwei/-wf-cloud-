@@ -60,4 +60,18 @@ public class ModifyProfileActivity extends AppCompatActivity {
     ActivityProfileModifyBinding binding;
     Profile mProfile;
     int[] selectedPosArray = new int[6];
- 
+    String imageURI;
+    ProgressDialog progressDialog;
+    boolean ftpStatus;
+
+    String mImgPath;
+    String mImgTitle;
+    String mImgOrient;
+    File imgFile;
+    String currentPath;
+
+    public ModifyProfileActivity() {
+    }
+
+    @Override
+    protected void o
