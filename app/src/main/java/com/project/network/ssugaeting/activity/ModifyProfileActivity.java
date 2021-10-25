@@ -74,4 +74,9 @@ public class ModifyProfileActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void o
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_profile_modify);
+
+        mProfile = SaveSharedPreference.getMyProfile();
+        selectedPosArray = SaveSharedPreference.g
