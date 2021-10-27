@@ -79,4 +79,7 @@ public class ModifyProfileActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_profile_modify);
 
         mProfile = SaveSharedPreference.getMyProfile();
-        selectedPosArray = SaveSharedPreference.g
+        selectedPosArray = SaveSharedPreference.getSelectedPosArray();
+
+        ArrayAdapter<String> religionAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, religionArray);
+        ArrayAdapter<String> hobbyAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, 
