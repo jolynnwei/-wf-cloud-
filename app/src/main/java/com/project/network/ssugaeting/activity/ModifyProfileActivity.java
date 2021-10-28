@@ -86,4 +86,8 @@ public class ModifyProfileActivity extends AppCompatActivity {
         ArrayAdapter<String> collegeAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, collegeArray);
         ArrayAdapter<String> circleAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, circleArray);
         ArrayAdapter<String> abroadExperienceAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, abroadExperienceArray);
-        ArrayAdapter<String> militaryStatusAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, militaryStatu
+        ArrayAdapter<String> militaryStatusAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, militaryStatusArray);
+
+        religionAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        hobbyAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        collegeAdapter.setDropDownViewResour
