@@ -90,4 +90,7 @@ public class ModifyProfileActivity extends AppCompatActivity {
 
         religionAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         hobbyAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        collegeAdapter.setDropDownViewResour
+        collegeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        circleAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        abroadExperienceAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+   
