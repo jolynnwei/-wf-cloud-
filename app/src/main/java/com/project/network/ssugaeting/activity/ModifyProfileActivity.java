@@ -93,4 +93,9 @@ public class ModifyProfileActivity extends AppCompatActivity {
         collegeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         circleAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         abroadExperienceAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-   
+        militaryStatusAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        Log.d("IMAGEURI", mProfile.getImageURI());
+        // Set Profile Layout
+        if (mProfile.getImageURI().equals(" "))
+            binding.i
