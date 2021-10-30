@@ -98,4 +98,8 @@ public class ModifyProfileActivity extends AppCompatActivity {
         Log.d("IMAGEURI", mProfile.getImageURI());
         // Set Profile Layout
         if (mProfile.getImageURI().equals(" "))
-            binding.i
+            binding.ivModifyProImage.setImageResource(R.mipmap.ic_person_base);
+        else {
+            imageURI = SaveSharedPreference.getMyImage();
+            FtpDownloadProTask mFtpDownloadProTask = new FtpDownloadProTask(imageURI, this);
+            mFtpDownloadProTask
