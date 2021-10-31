@@ -102,4 +102,10 @@ public class ModifyProfileActivity extends AppCompatActivity {
         else {
             imageURI = SaveSharedPreference.getMyImage();
             FtpDownloadProTask mFtpDownloadProTask = new FtpDownloadProTask(imageURI, this);
-            mFtpDownloadProTask
+            mFtpDownloadProTask.execute();
+        }
+        binding.etModifyName.setText(mProfile.getName());
+        binding.etModifyStateMsg.setText(mProfile.getStateMsg());
+        binding.etModifyAge.setText(mProfile.getAge());
+        binding.etModifyHeight.setText(mProfile.getHeight());
+        b
