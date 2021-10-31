@@ -108,4 +108,10 @@ public class ModifyProfileActivity extends AppCompatActivity {
         binding.etModifyStateMsg.setText(mProfile.getStateMsg());
         binding.etModifyAge.setText(mProfile.getAge());
         binding.etModifyHeight.setText(mProfile.getHeight());
-        b
+        binding.etModifyAddress.setText(mProfile.getAddress());
+        binding.etModifyMajor.setText(mProfile.getMajor());
+
+        binding.spModifyReligion.setAdapter(religionAdapter);
+        binding.spModifyHobby.setAdapter(hobbyAdapter);
+        binding.spModifyCollege.setAdapter(collegeAdapter);
+        binding.
