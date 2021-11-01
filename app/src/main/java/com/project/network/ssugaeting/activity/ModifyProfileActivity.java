@@ -119,4 +119,8 @@ public class ModifyProfileActivity extends AppCompatActivity {
         binding.spModifyMilitaryStatus.setAdapter(militaryStatusAdapter);
 
         binding.spModifyReligion.setSelection(selectedPosArray[0]);
-        binding.spModifyHo
+        binding.spModifyHobby.setSelection(selectedPosArray[1]);
+        binding.spModifyCollege.setSelection(selectedPosArray[2]);
+        binding.spModifyCircle.setSelection(selectedPosArray[3]);
+        binding.spModifyAbroadExperience.setSelection(selectedPosArray[4]);
+        bindin
