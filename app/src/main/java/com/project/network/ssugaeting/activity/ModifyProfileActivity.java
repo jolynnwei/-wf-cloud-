@@ -128,4 +128,7 @@ public class ModifyProfileActivity extends AppCompatActivity {
         binding.btnModifyComplete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mProfile.setName(bi
+                mProfile.setName(binding.etModifyName.getText().toString());
+                mProfile.setStateMsg(binding.etModifyStateMsg.getText().toString());
+                mProfile.setAge(binding.etModifyAge.getText().toString());
+                mProfile.setHeight(binding.etModi
