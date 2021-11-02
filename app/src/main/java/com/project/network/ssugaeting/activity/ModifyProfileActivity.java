@@ -123,4 +123,9 @@ public class ModifyProfileActivity extends AppCompatActivity {
         binding.spModifyCollege.setSelection(selectedPosArray[2]);
         binding.spModifyCircle.setSelection(selectedPosArray[3]);
         binding.spModifyAbroadExperience.setSelection(selectedPosArray[4]);
-        bindin
+        binding.spModifyMilitaryStatus.setSelection(selectedPosArray[5]);
+
+        binding.btnModifyComplete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mProfile.setName(bi
