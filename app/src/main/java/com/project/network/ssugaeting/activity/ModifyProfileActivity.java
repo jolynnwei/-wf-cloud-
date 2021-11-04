@@ -134,4 +134,9 @@ public class ModifyProfileActivity extends AppCompatActivity {
                 mProfile.setHeight(binding.etModifyHeight.getText().toString());
                 mProfile.setAddress(binding.etModifyAddress.getText().toString());
                 mProfile.setMajor(binding.etModifyMajor.getText().toString());
-                SaveSharedPreference.setM
+                SaveSharedPreference.setMyProfile(mProfile);
+                SaveSharedPreference.setSelectedPosArray(selectedPosArray);
+                setSpace();
+                // send modified Profile to server
+                StringBuffer modifyProfileSb = new StringBuffer();
+ 
