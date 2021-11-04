@@ -131,4 +131,7 @@ public class ModifyProfileActivity extends AppCompatActivity {
                 mProfile.setName(binding.etModifyName.getText().toString());
                 mProfile.setStateMsg(binding.etModifyStateMsg.getText().toString());
                 mProfile.setAge(binding.etModifyAge.getText().toString());
-                mProfile.setHeight(binding.etModi
+                mProfile.setHeight(binding.etModifyHeight.getText().toString());
+                mProfile.setAddress(binding.etModifyAddress.getText().toString());
+                mProfile.setMajor(binding.etModifyMajor.getText().toString());
+                SaveSharedPreference.setM
