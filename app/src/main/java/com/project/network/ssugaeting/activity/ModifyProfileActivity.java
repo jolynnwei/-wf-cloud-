@@ -139,4 +139,7 @@ public class ModifyProfileActivity extends AppCompatActivity {
                 setSpace();
                 // send modified Profile to server
                 StringBuffer modifyProfileSb = new StringBuffer();
- 
+                modifyProfileSb.append(MODIFY_PROFILE).append("$");
+                modifyProfileSb.append(mProfile.getId()).append("$");
+                modifyProfileSb.append(mProfile.getPassword()).append("$");
+                modifyProfileSb.appe
