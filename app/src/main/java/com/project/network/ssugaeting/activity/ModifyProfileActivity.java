@@ -142,4 +142,7 @@ public class ModifyProfileActivity extends AppCompatActivity {
                 modifyProfileSb.append(MODIFY_PROFILE).append("$");
                 modifyProfileSb.append(mProfile.getId()).append("$");
                 modifyProfileSb.append(mProfile.getPassword()).append("$");
-                modifyProfileSb.appe
+                modifyProfileSb.append(mProfile.getEmail()).append("$");
+                modifyProfileSb.append(mProfile.getName()).append("$");
+                modifyProfileSb.append(mProfile.getSex()).append("$");
+                modifyProfileSb.append(mProfile.g
