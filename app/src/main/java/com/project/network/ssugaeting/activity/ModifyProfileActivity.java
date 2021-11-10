@@ -149,4 +149,7 @@ public class ModifyProfileActivity extends AppCompatActivity {
                 modifyProfileSb.append(mProfile.getAge()).append("$");
                 modifyProfileSb.append(mProfile.getHeight()).append("$");
                 modifyProfileSb.append(mProfile.getAddress()).append("$");
-                
+                modifyProfileSb.append(mProfile.getHobby()).append("$");
+                modifyProfileSb.append(mProfile.getCollege()).append("$");
+                modifyProfileSb.append(mProfile.getMajor()).append("$");
+                modifyProfileSb.append
