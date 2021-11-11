@@ -155,4 +155,9 @@ public class ModifyProfileActivity extends AppCompatActivity {
                 modifyProfileSb.append(mProfile.getImageURI()).append("$");
                 modifyProfileSb.append(mProfile.getReligion()).append("$");
                 modifyProfileSb.append(mProfile.getCircle()).append("$");
-                modifyProfileSb.append(mProfile.getAbroad
+                modifyProfileSb.append(mProfile.getAbroadExperience()).append("$");
+                modifyProfileSb.append(mProfile.getMilitaryStatus());
+                ModifyProfileTask mModifyProfileTask = new ModifyProfileTask(modifyProfileSb.toString());
+                mModifyProfileTask.execute();
+
+               
