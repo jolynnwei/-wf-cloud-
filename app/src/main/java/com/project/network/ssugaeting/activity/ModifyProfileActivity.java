@@ -152,4 +152,7 @@ public class ModifyProfileActivity extends AppCompatActivity {
                 modifyProfileSb.append(mProfile.getHobby()).append("$");
                 modifyProfileSb.append(mProfile.getCollege()).append("$");
                 modifyProfileSb.append(mProfile.getMajor()).append("$");
-                modifyProfileSb.append
+                modifyProfileSb.append(mProfile.getImageURI()).append("$");
+                modifyProfileSb.append(mProfile.getReligion()).append("$");
+                modifyProfileSb.append(mProfile.getCircle()).append("$");
+                modifyProfileSb.append(mProfile.getAbroad
