@@ -160,4 +160,13 @@ public class ModifyProfileActivity extends AppCompatActivity {
                 ModifyProfileTask mModifyProfileTask = new ModifyProfileTask(modifyProfileSb.toString());
                 mModifyProfileTask.execute();
 
-               
+                backToMain();
+            }
+        });
+
+        binding.btnModifyCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                backToMain();
+            }
+      
