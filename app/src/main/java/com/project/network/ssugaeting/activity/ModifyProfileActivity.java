@@ -180,4 +180,8 @@ public class ModifyProfileActivity extends AppCompatActivity {
             }
         });
 
-        binding.spModifyReligion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListe
+        binding.spModifyReligion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                mProfile.setReligion(religionArray[position]);
+                selectedPosArray[0] = positio
