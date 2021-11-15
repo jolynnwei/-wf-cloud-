@@ -175,4 +175,9 @@ public class ModifyProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
- 
+                intent.setType("image/*");
+                startActivityForResult(Intent.createChooser(intent, "프로필 사진을 선택하세요."), IMAGE_REQUEST_CODE);
+            }
+        });
+
+        binding.spModifyReligion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListe
