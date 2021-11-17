@@ -184,4 +184,15 @@ public class ModifyProfileActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 mProfile.setReligion(religionArray[position]);
-                selectedPosArray[0] = positio
+                selectedPosArray[0] = position;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        binding.spModifyHobby.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+     
