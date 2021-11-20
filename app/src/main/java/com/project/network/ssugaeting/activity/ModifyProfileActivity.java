@@ -201,4 +201,11 @@ public class ModifyProfileActivity extends AppCompatActivity {
             }
 
             @Override
-     
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        binding.spModifyCollege.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> p
