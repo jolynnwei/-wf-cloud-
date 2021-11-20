@@ -195,4 +195,10 @@ public class ModifyProfileActivity extends AppCompatActivity {
 
         binding.spModifyHobby.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                mProfile.setHobby(hobbyArray[position]);
+                selectedPosArray[1] = position;
+            }
+
+            @Override
      
