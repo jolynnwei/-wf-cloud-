@@ -208,4 +208,10 @@ public class ModifyProfileActivity extends AppCompatActivity {
 
         binding.spModifyCollege.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> p
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                mProfile.setCollege(collegeArray[position]);
+                selectedPosArray[2] = position;
+            }
+
+            @Override
+            public void onNothingSelected
