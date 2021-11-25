@@ -221,4 +221,10 @@ public class ModifyProfileActivity extends AppCompatActivity {
 
         binding.spModifyCircle.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterV
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                mProfile.setCircle(circleArray[position]);
+                selectedPosArray[3] = position;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> paren
