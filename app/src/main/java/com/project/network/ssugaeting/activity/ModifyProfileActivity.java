@@ -234,4 +234,10 @@ public class ModifyProfileActivity extends AppCompatActivity {
 
         binding.spModifyAbroadExperience.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int p
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                mProfile.setAbroadExperience(abroadExperienceArray[position]);
+                selectedPosArray[4] = position;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
