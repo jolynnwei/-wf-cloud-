@@ -248,4 +248,13 @@ public class ModifyProfileActivity extends AppCompatActivity {
         binding.spModifyMilitaryStatus.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-      
+                mProfile.setMilitaryStatus(militaryStatusArray[position]);
+                selectedPosArray[5] = position;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+   
