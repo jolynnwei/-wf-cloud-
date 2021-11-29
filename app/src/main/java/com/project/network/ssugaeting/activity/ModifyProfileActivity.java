@@ -257,4 +257,13 @@ public class ModifyProfileActivity extends AppCompatActivity {
 
             }
         });
-   
+    }
+
+    public void backToMain() {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.putExtra("position", 2);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+
+    @Override
