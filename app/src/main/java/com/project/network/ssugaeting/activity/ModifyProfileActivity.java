@@ -270,4 +270,10 @@ public class ModifyProfileActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == IMAGE_REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData
+        if (requestCode == IMAGE_REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
+            Uri filePathURI;
+            filePathURI = data.getData();
+            if (filePathURI != null) {
+                imageURI = filePathURI.toString();
+                SaveSharedPreference.setMyImage(imageURI);
+        
