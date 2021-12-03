@@ -276,4 +276,8 @@ public class ModifyProfileActivity extends AppCompatActivity {
             if (filePathURI != null) {
                 imageURI = filePathURI.toString();
                 SaveSharedPreference.setMyImage(imageURI);
-        
+                // content://media/external/images/media/4080
+                Log.d("content", imageURI);
+                Picasso.with(this).load(imageURI).into(binding.ivModifyProImage);
+                getImageNameToUri(filePathURI);
+                imgFile = n
