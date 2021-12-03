@@ -280,4 +280,9 @@ public class ModifyProfileActivity extends AppCompatActivity {
                 Log.d("content", imageURI);
                 Picasso.with(this).load(imageURI).into(binding.ivModifyProImage);
                 getImageNameToUri(filePathURI);
-                imgFile = n
+                imgFile = new File(mImgPath);
+                mProfile.setImageURI(mImgPath);
+                // upload to ftp
+                if (!mProfile.getImageURI().equals(" ")) {
+                    final Thread ftpThread = new Thread(new Runnable() {
+                        @Override
