@@ -286,3 +286,8 @@ public class ModifyProfileActivity extends AppCompatActivity {
                 if (!mProfile.getImageURI().equals(" ")) {
                     final Thread ftpThread = new Thread(new Runnable() {
                         @Override
+                        public void run() {
+                            imgFile = new File(mImgPath);
+                            Log.d("mImgPath", mImgPath);
+                            ftpStatus = ftpConnection.ftpConnect();
+                            if (ftp
