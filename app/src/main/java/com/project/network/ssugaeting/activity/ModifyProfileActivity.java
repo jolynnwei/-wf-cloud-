@@ -290,4 +290,9 @@ public class ModifyProfileActivity extends AppCompatActivity {
                             imgFile = new File(mImgPath);
                             Log.d("mImgPath", mImgPath);
                             ftpStatus = ftpConnection.ftpConnect();
-                            if (ftp
+                            if (ftpStatus)
+                                Log.d(TAG, "FTP 연결 성공");
+                            else
+                                Log.d(TAG, "FTP 연결 실패");
+                            ftpConnection.ftpChangeDirectory("profile/");
+      
