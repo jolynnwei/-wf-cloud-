@@ -295,4 +295,7 @@ public class ModifyProfileActivity extends AppCompatActivity {
                             else
                                 Log.d(TAG, "FTP 연결 실패");
                             ftpConnection.ftpChangeDirectory("profile/");
-      
+                            ftpConnection.ftpUploadFile(imgFile, mProfile.getId());
+                            currentPath = ftpConnection.ftpGetDirectory();
+                            currentPath += "/" + mProfile.getId() + ".jpg";
+       
