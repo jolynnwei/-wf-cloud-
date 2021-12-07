@@ -303,4 +303,12 @@ public class ModifyProfileActivity extends AppCompatActivity {
                             ftpConnection.ftpDisconnect();
                         }
                     });
-                    ftp
+                    ftpThread.start();
+                }
+            } else {
+                binding.ivModifyProImage.setImageResource(R.mipmap.ic_person_base);
+            }
+        }
+    }
+
+    private class ModifyProfileTask extends AsyncTask<Void, Void, String> {
