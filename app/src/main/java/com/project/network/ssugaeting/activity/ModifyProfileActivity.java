@@ -298,4 +298,9 @@ public class ModifyProfileActivity extends AppCompatActivity {
                             ftpConnection.ftpUploadFile(imgFile, mProfile.getId());
                             currentPath = ftpConnection.ftpGetDirectory();
                             currentPath += "/" + mProfile.getId() + ".jpg";
-       
+                            Log.d("currentPath", currentPath);
+                            mProfile.setImageURI(currentPath);
+                            ftpConnection.ftpDisconnect();
+                        }
+                    });
+                    ftp
