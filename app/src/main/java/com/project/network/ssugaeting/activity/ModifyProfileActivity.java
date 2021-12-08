@@ -312,3 +312,12 @@ public class ModifyProfileActivity extends AppCompatActivity {
     }
 
     private class ModifyProfileTask extends AsyncTask<Void, Void, String> {
+        private String values;
+
+        public ModifyProfileTask(String values) {
+            this.values = values;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            progressDialog = ProgressDialog.show(getLayoutInflater().getContext(), "Con
