@@ -320,4 +320,12 @@ public class ModifyProfileActivity extends AppCompatActivity {
 
         @Override
         protected void onPreExecute() {
-            progressDialog = ProgressDialog.show(getLayoutInflater().getContext(), "Con
+            progressDialog = ProgressDialog.show(getLayoutInflater().getContext(), "Connecting Server", "Please wait...", false, false);
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            progressDialog.dismiss();
+            if (result.equals("UNCONNECTED")) {
+          
