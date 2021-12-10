@@ -328,4 +328,7 @@ public class ModifyProfileActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
             progressDialog.dismiss();
             if (result.equals("UNCONNECTED")) {
-          
+                Toast.makeText(getApplicationContext(), "서버 연결 실패", Toast.LENGTH_LONG).show();
+            } else if (result.equals("OK")) {
+                Toast.makeText(getApplicationContext(), "개인정보가 수정되었습니다.", Toast.LENGTH_LONG).show();
+            }
