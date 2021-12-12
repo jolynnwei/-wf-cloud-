@@ -331,4 +331,8 @@ public class ModifyProfileActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "서버 연결 실패", Toast.LENGTH_LONG).show();
             } else if (result.equals("OK")) {
                 Toast.makeText(getApplicationContext(), "개인정보가 수정되었습니다.", Toast.LENGTH_LONG).show();
-            }
+            } else if (result.equals("FAIL")) {
+                Toast.makeText(getApplicationContext(), "개인정보 수정 실패", Toast.LENGTH_LONG).show();
+                ;
+            } else {
+                Toast.makeText(getApplicationContext(), "전달된 데이터가 없습니다.",
