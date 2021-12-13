@@ -348,4 +348,13 @@ public class ModifyProfileActivity extends AppCompatActivity {
             Log.d("values", values);
             int idx = result.indexOf("&");
             result = result.substring(0, idx);
-   
+            return result;
+        }
+    }
+
+    // URI 정보를 이용하여 사진 정보 가져온다
+    private void getImageNameToUri(Uri data) {
+        String[] proj = {
+                MediaStore.Images.Media.DATA,
+                MediaStore.Images.Media.TITLE,
+                MediaSt
