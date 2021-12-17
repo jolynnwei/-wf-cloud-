@@ -362,4 +362,8 @@ public class ModifyProfileActivity extends AppCompatActivity {
 
         Cursor cursor = this.getContentResolver().query(data, proj, null, null, null);
         cursor.moveToFirst();
-        int column_data = cursor.getColumnIndexO
+        int column_data = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+        int column_title = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.TITLE);
+        int column_orientation = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.ORIENTATION);
+
+        mImgPath = c
