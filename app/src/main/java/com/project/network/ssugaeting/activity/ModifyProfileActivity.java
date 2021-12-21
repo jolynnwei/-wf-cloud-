@@ -366,4 +366,10 @@ public class ModifyProfileActivity extends AppCompatActivity {
         int column_title = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.TITLE);
         int column_orientation = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.ORIENTATION);
 
-        mImgPath = c
+        mImgPath = cursor.getString(column_data);
+        mImgTitle = cursor.getString(column_title);
+        mImgOrient = cursor.getString(column_orientation);
+    }
+
+    private void setSpace() {
+        if (mProfile.getReligion().equals("미선택")) m
