@@ -372,4 +372,7 @@ public class ModifyProfileActivity extends AppCompatActivity {
     }
 
     private void setSpace() {
-        if (mProfile.getReligion().equals("미선택")) m
+        if (mProfile.getReligion().equals("미선택")) mProfile.setReligion(" ");
+        if (mProfile.getHobby().equals("미선택")) mProfile.setHobby(" ");
+        if (mProfile.getCollege().equals("미선택")) mProfile.setCollege(" ");
+        if (mProfile.getCircle().equals("미선택")) mProfile.setCircle(" ")
