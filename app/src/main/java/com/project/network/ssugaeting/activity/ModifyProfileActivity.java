@@ -375,4 +375,9 @@ public class ModifyProfileActivity extends AppCompatActivity {
         if (mProfile.getReligion().equals("미선택")) mProfile.setReligion(" ");
         if (mProfile.getHobby().equals("미선택")) mProfile.setHobby(" ");
         if (mProfile.getCollege().equals("미선택")) mProfile.setCollege(" ");
-        if (mProfile.getCircle().equals("미선택")) mProfile.setCircle(" ")
+        if (mProfile.getCircle().equals("미선택")) mProfile.setCircle(" ");
+        if (mProfile.getAbroadExperience().equals("미선택")) mProfile.setAbroadExperience(" ");
+        if (mProfile.getMilitaryStatus().equals("미선택")) mProfile.setMilitaryStatus(" ");
+    }
+
+    private class FtpDownloadProTask extends AsyncTask<Void, Void, 
