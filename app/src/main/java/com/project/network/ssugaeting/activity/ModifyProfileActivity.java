@@ -380,4 +380,10 @@ public class ModifyProfileActivity extends AppCompatActivity {
         if (mProfile.getMilitaryStatus().equals("미선택")) mProfile.setMilitaryStatus(" ");
     }
 
-    private class FtpDownloadProTask extends AsyncTask<Void, Void, 
+    private class FtpDownloadProTask extends AsyncTask<Void, Void, String> {
+        private String imageURI;
+        private Context context;
+
+        public FtpDownloadProTask(String imageURI, Context context) {
+            this.imageURI = imageURI;
+            this.context = c
