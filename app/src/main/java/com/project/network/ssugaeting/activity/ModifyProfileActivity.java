@@ -386,4 +386,14 @@ public class ModifyProfileActivity extends AppCompatActivity {
 
         public FtpDownloadProTask(String imageURI, Context context) {
             this.imageURI = imageURI;
-            this.context = c
+            this.context = context;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            Picasso.with(context).load(imageURI).into(binding.ivModifyProImage)
