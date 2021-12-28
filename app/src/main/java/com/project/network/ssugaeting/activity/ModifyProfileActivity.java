@@ -396,4 +396,14 @@ public class ModifyProfileActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String result) {
-            Picasso.with(context).load(imageURI).into(binding.ivModifyProImage)
+            Picasso.with(context).load(imageURI).into(binding.ivModifyProImage);
+            super.onPostExecute(result);
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            String imgURI;
+            ftpStatus = ftpConnection.ftpConnect();
+            if (ftpStatus)
+                Log.d(TAG, "FTP 연결 성공");
+            
