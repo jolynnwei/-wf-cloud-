@@ -411,4 +411,11 @@ public class ModifyProfileActivity extends AppCompatActivity {
             ftpConnection.ftpDownloadFile(FTP_PATH + "/profile/" + mProfile.getId() + ".jgp", DIRECTORY_PATH + "/profile");
             imgURI = DIRECTORY_PATH + "/profile";
             File file = new File(imgURI);
-        
+            file.mkdirs();
+            imgURI += "/" + mProfile.getId() + ".jpg";
+            Log.d("imgURI", Uri.parse(imgURI)+"");
+            ftpConnection.ftpDisconnect();
+            return imgURI;
+        }
+    }
+}
