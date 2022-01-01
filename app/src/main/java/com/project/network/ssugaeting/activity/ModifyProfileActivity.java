@@ -406,4 +406,9 @@ public class ModifyProfileActivity extends AppCompatActivity {
             ftpStatus = ftpConnection.ftpConnect();
             if (ftpStatus)
                 Log.d(TAG, "FTP 연결 성공");
-            
+            else
+                Log.d(TAG, "FTP 연결 실패");
+            ftpConnection.ftpDownloadFile(FTP_PATH + "/profile/" + mProfile.getId() + ".jgp", DIRECTORY_PATH + "/profile");
+            imgURI = DIRECTORY_PATH + "/profile";
+            File file = new File(imgURI);
+        
