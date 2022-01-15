@@ -14,4 +14,10 @@ import com.project.network.ssugaeting.databinding.ActivitySplashBinding;
 public class SplashActivity extends AppCompatActivity {
 
     ActivitySplashBinding binding;
-    Animati
+    Animation splashAnim;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
+        splashAnim = AnimationUtil
