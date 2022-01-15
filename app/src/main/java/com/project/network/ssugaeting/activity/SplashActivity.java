@@ -20,4 +20,9 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
-        splashAnim = AnimationUtil
+        splashAnim = AnimationUtils.loadAnimation(this, R.anim.splash);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        splashAnim.setAnimationListener(new Animation.
