@@ -33,4 +33,15 @@ public class SplashActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                startActivity(new Intent(getApplicat
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                finish();
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        binding.ivSplashLogo.startAnimation(splashAnim);
+    }
+}
