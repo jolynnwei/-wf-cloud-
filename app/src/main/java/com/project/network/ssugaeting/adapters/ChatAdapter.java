@@ -36,4 +36,7 @@ import java.util.Vector;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-import static com.
+import static com.project.network.ssugaeting.activity.ChatRoomActivity.CONNECT_REQUEST_BY_OPPONENT;
+import static com.project.network.ssugaeting.activity.ChatRoomActivity.DATE_TURN;
+import static com.project.network.ssugaeting.activity.ChatRoomActivity.MY_TURN;
+import static com.project.network.ssuga
