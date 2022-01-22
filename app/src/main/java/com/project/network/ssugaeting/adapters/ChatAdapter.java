@@ -20,4 +20,8 @@ import com.project.network.ssugaeting.activity.ImageActivity;
 import com.project.network.ssugaeting.databinding.ItemChatBinding;
 import com.project.network.ssugaeting.ftp.FTPConnection;
 import com.project.network.ssugaeting.http_connect.RequestHttpURLConnection;
-impo
+import com.project.network.ssugaeting.item.Chat;
+import com.project.network.ssugaeting.item.ChatRoom;
+import com.project.network.ssugaeting.item.Profile;
+import com.project.network.ssugaeting.shared_preference.SaveSharedPreference;
+import com.squareup.picasso.Picass
