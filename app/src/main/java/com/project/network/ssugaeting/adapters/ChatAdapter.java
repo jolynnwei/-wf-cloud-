@@ -47,4 +47,13 @@ import static com.project.network.ssugaeting.activity.MainActivity.FTP_PATH;
  * Created by Jin on 2018-05-16.
  */
 
-public class ChatAdap
+public class ChatAdapter extends RecyclerView.Adapter {
+    private static final String TAG = "ChatAdapter";
+    private static final int CONNECT_RESPONSE = 9;
+
+    private ChatRoom chatRoom;
+    private Context context;
+    private int oppMsgCnt;
+    ProgressDialog progressDialog;
+
+    privat
