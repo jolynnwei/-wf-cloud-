@@ -56,4 +56,14 @@ public class ChatAdapter extends RecyclerView.Adapter {
     private int oppMsgCnt;
     ProgressDialog progressDialog;
 
-    privat
+    private FTPConnection ftpConnection = new FTPConnection();
+    ArrayList<Chat> chatList;
+    Profile oProfile;
+    boolean ftpStatus;
+    String currentPath;
+
+    String mImgPath;
+    String mImgTitle;
+    String mImgOrient;
+
+    public ChatAdapter(ChatRoom 
