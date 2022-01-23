@@ -66,4 +66,12 @@ public class ChatAdapter extends RecyclerView.Adapter {
     String mImgTitle;
     String mImgOrient;
 
-    public ChatAdapter(ChatRoom 
+    public ChatAdapter(ChatRoom chatRoom, Context context) {
+        this.chatRoom = chatRoom;
+        this.context = context;
+        oppMsgCnt = 0;
+    }
+
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        RecyclerView.ViewHolder hold
