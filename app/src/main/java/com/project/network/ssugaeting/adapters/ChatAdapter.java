@@ -74,4 +74,11 @@ public class ChatAdapter extends RecyclerView.Adapter {
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        RecyclerView.ViewHolder hold
+        RecyclerView.ViewHolder holder;
+        ItemChatBinding binding = ItemChatBinding.inflate(LayoutInflater.from(context), parent, false);
+        holder = new ChatHolder(binding);
+        return holder;
+    }
+
+    @Override
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int po
