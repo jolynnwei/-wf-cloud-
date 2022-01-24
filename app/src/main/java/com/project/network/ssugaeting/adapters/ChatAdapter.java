@@ -81,4 +81,11 @@ public class ChatAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int po
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+
+        ChatHolder itemViewHolder = (ChatHolder) holder;
+        final ItemChatBinding binding = itemViewHolder.binding;
+        chatList = chatRoom.getChatList();
+        oProfile = chatRoom.getProfile();
+
+        final int msgTurn = chatList.get(position).get
