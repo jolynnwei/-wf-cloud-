@@ -88,4 +88,8 @@ public class ChatAdapter extends RecyclerView.Adapter {
         chatList = chatRoom.getChatList();
         oProfile = chatRoom.getProfile();
 
-        final int msgTurn = chatList.get(position).get
+        final int msgTurn = chatList.get(position).getMsgTurn();
+        String sendMsg = chatList.get(position).getSendMsg();
+        final String sendImgURI = chatList.get(position).getSendImageURI();
+        final String curMsgTime = chatList.get(position).getMsgTime();
+        String pstMs
