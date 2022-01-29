@@ -92,4 +92,9 @@ public class ChatAdapter extends RecyclerView.Adapter {
         String sendMsg = chatList.get(position).getSendMsg();
         final String sendImgURI = chatList.get(position).getSendImageURI();
         final String curMsgTime = chatList.get(position).getMsgTime();
-        String pstMs
+        String pstMsgTime = "";
+        if (position > 1) pstMsgTime = chatList.get(position - 1).getMsgTime();
+        final String userName = oProfile.getName();
+        final String userProImageURI = oProfile.getImageURI();
+        binding.tvOppChatName.setText(userName);
+   
