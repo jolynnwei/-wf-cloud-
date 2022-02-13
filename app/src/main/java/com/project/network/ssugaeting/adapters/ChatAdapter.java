@@ -97,4 +97,10 @@ public class ChatAdapter extends RecyclerView.Adapter {
         final String userName = oProfile.getName();
         final String userProImageURI = oProfile.getImageURI();
         binding.tvOppChatName.setText(userName);
-   
+        if (!userProImageURI.equals(" ")) {
+            Log.d("userProImageURI", userProImageURI);
+            FtpDownloadProTask mFtpDownloadProTask = new FtpDownloadProTask(userProImageURI, binding);
+            mFtpDownloadProTask.execute();
+        }
+
+        
