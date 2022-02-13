@@ -103,4 +103,9 @@ public class ChatAdapter extends RecyclerView.Adapter {
             mFtpDownloadProTask.execute();
         }
 
-        
+        switch (msgTurn) {
+            case MY_TURN:
+                oppMsgCnt = 0;
+                binding.rlOppChat.setVisibility(View.GONE);
+                binding.rlMyChat.setVisibility(View.VISIBLE);
+                binding.llShowDate.setVisibility(View.GONE)
