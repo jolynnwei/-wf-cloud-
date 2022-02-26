@@ -113,4 +113,9 @@ public class ChatAdapter extends RecyclerView.Adapter {
                 if (sendImgURI == null) {
                     binding.tvMyChatMsg.setVisibility(View.VISIBLE);
                     binding.tvMyChatTime.setVisibility(View.VISIBLE);
-                    binding.ivMySendImage.setVisibilit
+                    binding.ivMySendImage.setVisibility(View.GONE);
+                    binding.tvMyImageTime.setVisibility(View.GONE);
+                    binding.tvMyChatMsg.setText(sendMsg);
+                    binding.tvMyChatTime.setText(curMsgTime);
+                }
+                // 이미지 
