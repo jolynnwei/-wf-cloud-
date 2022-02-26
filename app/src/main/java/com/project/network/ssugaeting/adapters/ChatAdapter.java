@@ -123,4 +123,8 @@ public class ChatAdapter extends RecyclerView.Adapter {
                     binding.tvMyChatMsg.setVisibility(View.GONE);
                     binding.tvMyChatTime.setVisibility(View.GONE);
                     binding.ivMySendImage.setVisibility(View.VISIBLE);
-                 
+                    binding.tvMyImageTime.setVisibility(View.VISIBLE);
+                    binding.tvMyImageTime.setText(curMsgTime);
+                    binding.ivMySendImage.setOnClickListener(new View.OnClickListener() {
+                        @Override
+         
