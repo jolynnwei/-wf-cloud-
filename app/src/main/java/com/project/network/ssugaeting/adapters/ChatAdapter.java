@@ -127,4 +127,7 @@ public class ChatAdapter extends RecyclerView.Adapter {
                     binding.tvMyImageTime.setText(curMsgTime);
                     binding.ivMySendImage.setOnClickListener(new View.OnClickListener() {
                         @Override
-         
+                        public void onClick(View v) {
+                            Intent intent = new Intent(context.getApplicationContext(), ImageActivity.class);
+                            intent.putExtra("SELECTED_IMAGE", sendImgURI);
+ 
