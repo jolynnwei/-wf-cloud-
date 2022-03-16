@@ -137,4 +137,10 @@ public class ChatAdapter extends RecyclerView.Adapter {
                 break;
             case OPPONENT_TURN:
                 if (sendMsg.equals(CONNECT_REQUEST_BY_OPPONENT)) {
-    
+                    showConnectRequest(binding);
+                    return;
+                } else {
+                    binding.llConnectRequest.setVisibility(View.GONE);
+                }
+                if (sendMsg.equals("CONNECTED")) {
+                    s
