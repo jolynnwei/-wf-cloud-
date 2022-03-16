@@ -130,4 +130,11 @@ public class ChatAdapter extends RecyclerView.Adapter {
                         public void onClick(View v) {
                             Intent intent = new Intent(context.getApplicationContext(), ImageActivity.class);
                             intent.putExtra("SELECTED_IMAGE", sendImgURI);
- 
+                            context.startActivity(intent);
+                        }
+                    });
+                }
+                break;
+            case OPPONENT_TURN:
+                if (sendMsg.equals(CONNECT_REQUEST_BY_OPPONENT)) {
+    
