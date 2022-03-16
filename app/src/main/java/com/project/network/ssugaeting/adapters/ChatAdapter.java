@@ -149,4 +149,8 @@ public class ChatAdapter extends RecyclerView.Adapter {
                 binding.rlMyChat.setVisibility(View.GONE);
                 binding.rlOppChat.setVisibility(View.VISIBLE);
                 binding.llShowDate.setVisibility(View.GONE);
-                bin
+                binding.tvOppChatMsg.setText(sendMsg);
+                binding.tvOppChatTime.setText(curMsgTime);
+                if (oppMsgCnt > 1 && pstMsgTime.equals(curMsgTime)) {
+                    binding.tvOppChatName.setVisibility(View.GONE);
+                    binding.ivOppProIma
