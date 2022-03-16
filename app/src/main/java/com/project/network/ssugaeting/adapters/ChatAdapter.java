@@ -143,4 +143,10 @@ public class ChatAdapter extends RecyclerView.Adapter {
                     binding.llConnectRequest.setVisibility(View.GONE);
                 }
                 if (sendMsg.equals("CONNECTED")) {
-                    s
+                    sendMsg = "상대방과 연결되었습니다.";
+                }
+                oppMsgCnt++;
+                binding.rlMyChat.setVisibility(View.GONE);
+                binding.rlOppChat.setVisibility(View.VISIBLE);
+                binding.llShowDate.setVisibility(View.GONE);
+                bin
