@@ -153,4 +153,9 @@ public class ChatAdapter extends RecyclerView.Adapter {
                 binding.tvOppChatTime.setText(curMsgTime);
                 if (oppMsgCnt > 1 && pstMsgTime.equals(curMsgTime)) {
                     binding.tvOppChatName.setVisibility(View.GONE);
-                    binding.ivOppProIma
+                    binding.ivOppProImage.setVisibility(View.INVISIBLE);
+                }
+                // 메시지 전송인 경우
+                if (sendImgURI == null) {
+                    binding.tvOppChatMsg.setVisibility(View.VISIBLE);
+                    binding.tvOppChatTime.setVisibility(View.VISIB
