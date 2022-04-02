@@ -171,4 +171,8 @@ public class ChatAdapter extends RecyclerView.Adapter {
                     binding.ivOppRecvImage.setVisibility(View.VISIBLE);
                     binding.tvOppImageTime.setVisibility(View.VISIBLE);
                     binding.tvOppImageTime.setText(curMsgTime);
-                    binding.ivOpp
+                    binding.ivOppRecvImage.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(context.getApplicationContext(), ImageActivity.class);
+              
