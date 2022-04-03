@@ -181,4 +181,10 @@ public class ChatAdapter extends RecyclerView.Adapter {
                     });
                 }
                 break;
-            case DATE_TU
+            case DATE_TURN:
+                binding.rlOppChat.setVisibility(View.GONE);
+                binding.rlMyChat.setVisibility(View.GONE);
+                binding.llShowDate.setVisibility(View.VISIBLE);
+                binding.tvDate.setText(curMsgTime);
+        }
+  
