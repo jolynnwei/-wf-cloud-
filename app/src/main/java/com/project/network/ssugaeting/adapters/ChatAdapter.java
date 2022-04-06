@@ -187,4 +187,15 @@ public class ChatAdapter extends RecyclerView.Adapter {
                 binding.llShowDate.setVisibility(View.VISIBLE);
                 binding.tvDate.setText(curMsgTime);
         }
-  
+    }
+
+    @Override
+    public int getItemCount() {
+        return chatRoom.getChatList().size();
+    }
+
+    private class ChatHolder extends RecyclerView.ViewHolder {
+        ItemChatBinding binding;
+
+        ChatHolder(ItemChatBinding binding) {
+ 
