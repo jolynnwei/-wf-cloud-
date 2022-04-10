@@ -211,4 +211,8 @@ public class ChatAdapter extends RecyclerView.Adapter {
         binding.btnReqAccept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Profile
+                Profile mProfile = SaveSharedPreference.getMyProfile();
+                StringBuffer connResSb = new StringBuffer();
+                connResSb.append(CONNECT_RESPONSE).append("$");
+                connResSb.append(mProfile.getId()).append("$");
+               
