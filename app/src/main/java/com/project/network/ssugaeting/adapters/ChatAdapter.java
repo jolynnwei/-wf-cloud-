@@ -215,4 +215,7 @@ public class ChatAdapter extends RecyclerView.Adapter {
                 StringBuffer connResSb = new StringBuffer();
                 connResSb.append(CONNECT_RESPONSE).append("$");
                 connResSb.append(mProfile.getId()).append("$");
-               
+                connResSb.append(oProfile.getId()).append("$");
+                connResSb.append("1");
+                ConnectResponseTask mConnectResponseTask = new ConnectResponseTask(connResSb.toString());
+                mConnectResponseT
