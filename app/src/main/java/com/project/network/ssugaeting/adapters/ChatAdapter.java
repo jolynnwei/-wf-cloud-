@@ -206,3 +206,9 @@ public class ChatAdapter extends RecyclerView.Adapter {
     private void showConnectRequest(ItemChatBinding binding) {
         binding.rlOppChat.setVisibility(View.VISIBLE);
         binding.rlMyChat.setVisibility(View.GONE);
+        binding.llConnectRequest.setVisibility(View.VISIBLE);
+
+        binding.btnReqAccept.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Profile
