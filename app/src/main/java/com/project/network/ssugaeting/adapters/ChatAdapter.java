@@ -198,4 +198,11 @@ public class ChatAdapter extends RecyclerView.Adapter {
         ItemChatBinding binding;
 
         ChatHolder(ItemChatBinding binding) {
- 
+            super(binding.getRoot());
+            this.binding = binding;
+        }
+    }
+
+    private void showConnectRequest(ItemChatBinding binding) {
+        binding.rlOppChat.setVisibility(View.VISIBLE);
+        binding.rlMyChat.setVisibility(View.GONE);
