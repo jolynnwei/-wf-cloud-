@@ -230,4 +230,11 @@ public class ChatAdapter extends RecyclerView.Adapter {
                 connResSb.append(CONNECT_RESPONSE).append("$");
                 connResSb.append(mProfile.getId()).append("$");
                 connResSb.append(oProfile.getId()).append("$");
-                connRes
+                connResSb.append("0");
+                ConnectResponseTask mConnectResponseTask = new ConnectResponseTask(connResSb.toString());
+                mConnectResponseTask.execute();
+            }
+        });
+    }
+
+    private class FtpDownloadProTask extends AsyncTask<
