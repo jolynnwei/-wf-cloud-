@@ -218,4 +218,12 @@ public class ChatAdapter extends RecyclerView.Adapter {
                 connResSb.append(oProfile.getId()).append("$");
                 connResSb.append("1");
                 ConnectResponseTask mConnectResponseTask = new ConnectResponseTask(connResSb.toString());
-                mConnectResponseT
+                mConnectResponseTask.execute();
+            }
+        });
+
+        binding.btnReqReject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Profile mProfile = SaveSharedPreference.getMyProfile();
+          
