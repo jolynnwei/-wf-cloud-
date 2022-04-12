@@ -244,3 +244,14 @@ public class ChatAdapter extends RecyclerView.Adapter {
         public FtpDownloadProTask(String imageURI, ItemChatBinding binding) {
             this.imageURI = imageURI;
             this.binding = binding;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            Log.d(TAG, result);
+            binding.ivOppProImage.setImageURI(Ur
