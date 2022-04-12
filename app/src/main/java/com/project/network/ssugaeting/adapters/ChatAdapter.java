@@ -254,4 +254,13 @@ public class ChatAdapter extends RecyclerView.Adapter {
         @Override
         protected void onPostExecute(String result) {
             Log.d(TAG, result);
-            binding.ivOppProImage.setImageURI(Ur
+            binding.ivOppProImage.setImageURI(Uri.parse(result));
+            super.onPostExecute(result);
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            String imgURI;
+            ftpStatus = ftpConnection.ftpConnect();
+            if (ftpStatus)
+                L
