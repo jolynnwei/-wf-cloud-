@@ -269,4 +269,10 @@ public class ChatAdapter extends RecyclerView.Adapter {
             ftpConnection.ftpChangeDirectory("profile/");
             imgURI = DIRECTORY_PATH + "/profile";
             imgURI += "/" + oProfile.getId() + ".jpg";
-          
+            ftpConnection.ftpDownloadFile(FTP_PATH + "/profile/" + oProfile.getId() + ".jpg", imgURI);
+            ftpConnection.ftpDisconnect();
+            return imgURI;
+        }
+    }
+
+    private class FtpDownloadMsgTask extends AsyncTask<Void, V
