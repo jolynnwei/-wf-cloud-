@@ -275,4 +275,13 @@ public class ChatAdapter extends RecyclerView.Adapter {
         }
     }
 
-    private class FtpDownloadMsgTask extends AsyncTask<Void, V
+    private class FtpDownloadMsgTask extends AsyncTask<Void, Void, String> {
+        private String imageURI;
+        private ImageView imageView;
+
+        public FtpDownloadMsgTask(String imageURI, ImageView imageView) {
+            this.imageURI = imageURI;
+            this.imageView = imageView;
+        }
+
+        @Over
