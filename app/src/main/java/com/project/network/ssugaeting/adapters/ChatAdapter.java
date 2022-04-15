@@ -284,4 +284,12 @@ public class ChatAdapter extends RecyclerView.Adapter {
             this.imageView = imageView;
         }
 
-        @Over
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            Log.d(TAG, result);
+            imageView.setImageURI(U
