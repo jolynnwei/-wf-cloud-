@@ -312,4 +312,17 @@ public class ChatAdapter extends RecyclerView.Adapter {
             ftpConnection.ftpDownloadFile(imageURI, imgURI);
             Log.d("다운로드된 파일", imgURI);
             ftpConnection.ftpDisconnect();
-   
+            return imgURI;
+        }
+    }
+
+
+    private class ConnectResponseTask extends AsyncTask<Void, Void, String> {
+        private String values;
+
+        public ConnectResponseTask(String values) {
+            this.values = values;
+        }
+
+        @Override
+        protected v
