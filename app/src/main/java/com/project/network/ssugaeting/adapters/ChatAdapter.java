@@ -301,4 +301,9 @@ public class ChatAdapter extends RecyclerView.Adapter {
             String imgURI;
             ftpStatus = ftpConnection.ftpConnect();
             if (ftpStatus)
-              
+                Log.d(TAG, "FTP 연결 성공");
+            else
+                Log.d(TAG, "FTP 연결 실패");
+            imgURI = DIRECTORY_PATH + "/chat";
+            int idx = imageURI.indexOf("msg/");
+            String title = imageURI.sub
