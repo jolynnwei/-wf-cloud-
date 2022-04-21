@@ -325,4 +325,11 @@ public class ChatAdapter extends RecyclerView.Adapter {
         }
 
         @Override
-        protected v
+        protected void onPreExecute() {
+            progressDialog = ProgressDialog.show(context, "Connecting Server", "Please wait...", false, false);
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+  
