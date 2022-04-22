@@ -349,4 +349,12 @@ public class ChatAdapter extends RecyclerView.Adapter {
         protected String doInBackground(Void... voids) {
             String result; // 요청 결과를 저장할 변수.
             RequestHttpURLConnection requestHttpURLConnection = new RequestHttpURLConnection();
-         
+            result = requestHttpURLConnection.request(values);
+            Log.d(TAG, result);
+            int idx = result.indexOf("&");
+            result = result.substring(0, idx);
+            return result;
+        }
+    }
+
+    private void getImageNameToUri(Uri data)
