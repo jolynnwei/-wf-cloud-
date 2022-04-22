@@ -368,4 +368,11 @@ public class ChatAdapter extends RecyclerView.Adapter {
         cursor.moveToFirst();
         int column_data = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
         int column_title = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.TITLE);
-        int column_orientation = cursor.getColumnInd
+        int column_orientation = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.ORIENTATION);
+
+        mImgPath = cursor.getString(column_data);
+        mImgTitle = cursor.getString(column_title);
+        mImgOrient = cursor.getString(column_orientation);
+    }
+
+}
