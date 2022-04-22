@@ -357,4 +357,12 @@ public class ChatAdapter extends RecyclerView.Adapter {
         }
     }
 
-    private void getImageNameToUri(Uri data)
+    private void getImageNameToUri(Uri data) {
+        String[] proj = {
+                MediaStore.Images.Media.DATA,
+                MediaStore.Images.Media.TITLE,
+                MediaStore.Images.Media.ORIENTATION
+        };
+
+        Cursor cursor = context.getContentResolver().query(data, proj, null, null, null);
+    
