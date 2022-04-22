@@ -336,4 +336,10 @@ public class ChatAdapter extends RecyclerView.Adapter {
             if (result.equals("UNCONNECTED")) {
                 Toast.makeText(context, "서버 연결 실패", Toast.LENGTH_LONG).show();
             } else if (result.equals("ACCEPT")) {
-                Toast.makeText(context, "수락하였습니다.", Toast.LENGTH_LON
+                Toast.makeText(context, "수락하였습니다.", Toast.LENGTH_LONG).show();
+            } else if (result.equals("REJECT")) {
+                Toast.makeText(context, "거절하였습니다.", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(context, "전달된 데이터가 없습니다.", Toast.LENGTH_LONG).show();
+            }
+            
