@@ -342,4 +342,11 @@ public class ChatAdapter extends RecyclerView.Adapter {
             } else {
                 Toast.makeText(context, "전달된 데이터가 없습니다.", Toast.LENGTH_LONG).show();
             }
-            
+            super.onPostExecute(result);
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            String result; // 요청 결과를 저장할 변수.
+            RequestHttpURLConnection requestHttpURLConnection = new RequestHttpURLConnection();
+         
