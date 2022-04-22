@@ -332,4 +332,8 @@ public class ChatAdapter extends RecyclerView.Adapter {
 
         @Override
         protected void onPostExecute(String result) {
-  
+            progressDialog.dismiss();
+            if (result.equals("UNCONNECTED")) {
+                Toast.makeText(context, "서버 연결 실패", Toast.LENGTH_LONG).show();
+            } else if (result.equals("ACCEPT")) {
+                Toast.makeText(context, "수락하였습니다.", Toast.LENGTH_LON
