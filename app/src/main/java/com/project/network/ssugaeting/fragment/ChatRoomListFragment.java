@@ -172,3 +172,124 @@ public class ChatRoomListFragment extends Fragment {
         String email = tokenizer.nextToken();
         String name = tokenizer.nextToken();
         String sex = tokenizer.nextToken();
+        String stateMsg = tokenizer.nextToken();
+        String age = tokenizer.nextToken();
+        String height = tokenizer.nextToken();
+        String address = tokenizer.nextToken();
+        String hobby = tokenizer.nextToken();
+        String college = tokenizer.nextToken();
+        String major = tokenizer.nextToken();
+        String imageURI = tokenizer.nextToken();
+        String religion = tokenizer.nextToken();
+        String circle = tokenizer.nextToken();
+        String abroadExperience = tokenizer.nextToken();
+        String militaryStatus = tokenizer.nextToken();
+        return new Profile(id, password, email, name, sex, stateMsg, age, height,
+                address, hobby, college, major, imageURI, religion, circle, abroadExperience, militaryStatus);
+    }
+
+    private void loadChatsFromFile() {
+        if (!chatsFile.exists()) {
+            Log.d(TAG, "File of chats is not exist");
+            return;
+        }
+        try {
+            chatList.clear();
+            FileInputStream fis = new FileInputStream(chatsFile);
+            ObjectInputStream in = new ObjectInputStream(new BufferedInputStream(fis));
+
+            while (true) {
+                Chat mChat = (Chat) in.readObject();
+                if (mChat == null)
+                    break;
+                chatList.add(mChat);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private class LoadChatRoomListTask extends AsyncTask<Void, Void, String> {
+        private String values;
+
+        public LoadChatRoomListTask(String values) {
+            this.values = values;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            if (!result.equals("FAIL")) {
+                Log.d(TAG, "result");
+                String id;
+                String msg;
+                String imgURI;
+                String time;
+                StringTokenizer resultTokenizer = new StringTokenizer(result, "|");
+                while (resultTokenizer.hasMoreTokens()) {
+                    String chatListContent = resultTokenizer.nextToken();
+                    StringTokenizer chatTokenizer = new StringTokenizer(chatListContent, "$");
+                    id = chatTokenizer.nextToken();
+                    msgCnt = 0;
+                    while (chatTokenizer.hasMoreTokens()) {
+                        msg = chatTokenizer.nextToken();
+                        if (msg.equals(" ")) msg = null;
+                        imgURI = chatTokenizer.nextToken();
+                        if (imgURI.equals(" ")) imgURI = null;
+                        time = chatTokenizer.nextToken();
+                        if (time.equals(" ")) time = null;
+                        if (msg == null && imgURI == null && time == null) {
+                            msgCnt = 1;
+                        } else {
+                            chatList.add(new Chat(msg, imgURI, time, OPPONENT_TURN));
+                            msgCnt++;
+                        }
+                    }
+                    for (int i = 0; i < profileList.size(); i++) {
+                        if (id.equals(profileList.get(i).getId())) {
+                            Profile oProfile = profileList.get(i);
+                            chatsFile = new File(DIRECTORY_PATH + "/chat/" + oProfile.getId() + ".txt");
+                            loadChatsFromFile();
+                            id_msgCnt.put(id, msgCnt);
+                            chatRoomList.add(new ChatRoom(chatList, oProfile, id_msgCnt.get(id)));
+                        }
+                    }
+                }
+                chatRoomAdapter = new ChatRoomAdapter(getContext());
+                for (ChatRoom chatRoom : chatRoomList)
+                    chatRoomAdapter.addItem(chatRoom);
+                binding.lvChatRoomList.setAdapter(chatRoomAdapter);
+            }
+            super.onPostExecute(result);
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            String result; // 요청 결과를 저장할 변수.
+            RequestHttpURLConnection requestHttpURLConnection = new RequestHttpURLConnection();
+            result = requestHttpURLConnection.request(values);
+            int idx = result.indexOf("&");
+            result = result.substring(0, idx);
+            return result;
+        }
+    }
+
+  /*  private void saveToFile() {
+        try {
+            FileOutputStream fos = new FileOutputStream(chatRoomListFile, true);
+            ObjectOutputStream os = new ObjectOutputStream(fos);
+            os.writeObject(chatRoom);
+            os.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }*/
+
+}
