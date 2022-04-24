@@ -44,3 +44,27 @@ public class ChatRoomAdapter extends BaseAdapter {
         ChatRoomView mView = (ChatRoomView) convertView;
 
         if (convertView == null)
+            mView = new ChatRoomView(context.getApplicationContext());
+
+        ChatRoom item = items.get(position);
+
+        mView.setUserName(item.getProfile().getName());
+        if(!item.getChatList().isEmpty()) {
+            int last = item.getChatList().size() - 1;
+            mView.setUserMsg(item.getChatList().get(last).getSendMsg());
+            mView.setMsgTime(item.getChatList().get(last).getMsgTime());
+        }
+        mView.setMsgCount(item.getUnCheckMsgCnt());
+        mView.setUserImageURL(item.getProfile().getImageURI());
+
+        return mView;
+    }
+
+    public void addItem(ChatRoom item) {
+        items.add(item);
+    }
+
+    public void clearItem() {
+        items.clear();
+    }
+}
