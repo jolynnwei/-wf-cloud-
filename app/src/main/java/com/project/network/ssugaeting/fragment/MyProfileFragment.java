@@ -26,4 +26,14 @@ public class MyProfileFragment extends Fragment {
     public MyProfileFragment() {
     }
 
-    public stati
+    public static MyProfileFragment newInstance() {
+        return new MyProfileFragment();
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflate
