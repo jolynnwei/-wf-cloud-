@@ -36,4 +36,9 @@ public class MyProfileFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflate
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_myprofile, container, false);
+        mProfile = SaveSharedPreference.getMyProfile();
+
+        if (m
