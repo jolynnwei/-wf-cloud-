@@ -41,4 +41,8 @@ public class MyProfileFragment extends Fragment {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_myprofile, container, false);
         mProfile = SaveSharedPreference.getMyProfile();
 
-        if (m
+        if (mProfile.getImageURI().equals(" ")) {
+            binding.ivMyProImage.setImageResource(R.mipmap.ic_person_base);
+        } else {
+            imageURI = SaveSharedPreference.getMyImage();
+            Picasso.with(getContext()).load(imageU
