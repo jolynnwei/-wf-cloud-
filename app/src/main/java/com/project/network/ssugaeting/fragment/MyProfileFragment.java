@@ -45,4 +45,10 @@ public class MyProfileFragment extends Fragment {
             binding.ivMyProImage.setImageResource(R.mipmap.ic_person_base);
         } else {
             imageURI = SaveSharedPreference.getMyImage();
-            Picasso.with(getContext()).load(imageU
+            Picasso.with(getContext()).load(imageURI).resize(1080, 1080).into(binding.ivMyProImage);
+        }
+
+        binding.tvMyName.setText(mProfile.getName());
+        binding.tvMySex.setText(mProfile.getSex());
+        binding.tvMyStateMsg.setText(mProfile.getStateMsg());
+        binding.tv
