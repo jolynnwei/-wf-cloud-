@@ -60,4 +60,9 @@ public class MyProfileFragment extends Fragment {
         binding.tvMyCollege.setText(mProfile.getCollege());
         binding.tvMyCircle.setText(mProfile.getCircle());
         binding.tvMyAbroadExperience.setText(mProfile.getAbroadExperience());
-        binding.tvMyMilit
+        binding.tvMyMilitaryStatus.setText(mProfile.getMilitaryStatus());
+
+        binding.btnProfileModify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ModifyProfi
