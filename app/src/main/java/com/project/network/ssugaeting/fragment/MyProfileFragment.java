@@ -55,4 +55,9 @@ public class MyProfileFragment extends Fragment {
         binding.tvMyHeight.setText(mProfile.getHeight());
         binding.tvMyAddress.setText(mProfile.getAddress());
         binding.tvMyMajor.setText(mProfile.getMajor());
-        binding.tvMyReligion.setText(mProfile.getReligio
+        binding.tvMyReligion.setText(mProfile.getReligion());
+        binding.tvMyHobby.setText(mProfile.getHobby());
+        binding.tvMyCollege.setText(mProfile.getCollege());
+        binding.tvMyCircle.setText(mProfile.getCircle());
+        binding.tvMyAbroadExperience.setText(mProfile.getAbroadExperience());
+        binding.tvMyMilit
