@@ -73,4 +73,8 @@ public class MyProfileFragment extends Fragment {
 
         binding.ivMyProImage.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onC
+            public void onClick(View v) {
+                if (imageURI != null) {
+                    Intent intent = new Intent(getContext(), ImageActivity.class);
+                    intent.putExtra("SELECTED_IMAGE", imageURI);
+                    startActivity(intent);
