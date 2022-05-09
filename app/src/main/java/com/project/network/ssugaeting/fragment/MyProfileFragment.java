@@ -65,4 +65,12 @@ public class MyProfileFragment extends Fragment {
         binding.btnProfileModify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), ModifyProfi
+                Intent intent = new Intent(getContext(), ModifyProfileActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+
+        binding.ivMyProImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onC
