@@ -78,3 +78,14 @@ public class MyProfileFragment extends Fragment {
                     Intent intent = new Intent(getContext(), ImageActivity.class);
                     intent.putExtra("SELECTED_IMAGE", imageURI);
                     startActivity(intent);
+                }
+            }
+        });
+
+        return binding.getRoot();
+    }
+
+
+
+}
+
