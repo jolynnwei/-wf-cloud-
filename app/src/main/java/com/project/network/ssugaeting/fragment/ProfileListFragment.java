@@ -11,4 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.project.network.ssugaeting.R;
-import com
+import com.project.network.ssugaeting.activity.ProfileActivity;
+import com.project.network.ssugaeting.adapters.ProfileAdapter;
+import com.project.network.ssugaeting.databinding.FragmentProfileListBinding;
+import com.project.network.ssugaeting.item.Profil
