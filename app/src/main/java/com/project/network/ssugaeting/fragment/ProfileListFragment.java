@@ -29,4 +29,7 @@ public class ProfileListFragment extends Fragment {
 
     }
 
- 
+    public static ProfileListFragment newInstance(ArrayList<Profile> filteredProfileList) {
+        ProfileListFragment mProfileListFragment = new ProfileListFragment();
+        Bundle mBundle = new Bundle();
+        mBundle.putParcelableArrayList("FILTERED_P
