@@ -14,4 +14,19 @@ import com.project.network.ssugaeting.R;
 import com.project.network.ssugaeting.activity.ProfileActivity;
 import com.project.network.ssugaeting.adapters.ProfileAdapter;
 import com.project.network.ssugaeting.databinding.FragmentProfileListBinding;
-import com.project.network.ssugaeting.item.Profil
+import com.project.network.ssugaeting.item.Profile;
+
+import java.util.ArrayList;
+
+public class ProfileListFragment extends Fragment {
+
+    static ProfileAdapter profileAdapter;
+    FragmentProfileListBinding binding;
+
+    ArrayList<Profile> mProfileList = new ArrayList<>(100);
+
+    public ProfileListFragment() {
+
+    }
+
+ 
