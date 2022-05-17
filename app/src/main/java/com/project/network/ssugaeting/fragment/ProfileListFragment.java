@@ -32,4 +32,14 @@ public class ProfileListFragment extends Fragment {
     public static ProfileListFragment newInstance(ArrayList<Profile> filteredProfileList) {
         ProfileListFragment mProfileListFragment = new ProfileListFragment();
         Bundle mBundle = new Bundle();
-        mBundle.putParcelableArrayList("FILTERED_P
+        mBundle.putParcelableArrayList("FILTERED_PROFILES", filteredProfileList);
+        mProfileListFragment.setArguments(mBundle);
+        return mProfileListFragment;
+    }
+
+    public static void clearProfileList() {
+        profileAdapter.clearItem();
+    }
+
+    @Override
+    public void onCreate(Bundle save
