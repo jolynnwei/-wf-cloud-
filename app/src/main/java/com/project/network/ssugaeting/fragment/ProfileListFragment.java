@@ -52,4 +52,10 @@ public class ProfileListFragment extends Fragment {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_profile_list, container, false);
         profileAdapter = new ProfileAdapter(getContext());
         mProfileList = (ArrayList<Profile>) getArguments().get("FILTERED_PROFILES");
-        if (mProfile
+        if (mProfileList != null) {
+            for (Profile profile : mProfileList)
+                profileAdapter.addItem(profile);
+            binding.lvProfileList.setAdapter(profileAdapter);
+        }
+
+        binding.lvProfileList.setOnItemClickListener
