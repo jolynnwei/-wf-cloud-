@@ -58,4 +58,8 @@ public class ProfileListFragment extends Fragment {
             binding.lvProfileList.setAdapter(profileAdapter);
         }
 
-        binding.lvProfileList.setOnItemClickListener
+        binding.lvProfileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getContext(), ProfileActivity.class);
+                Profil
