@@ -62,4 +62,9 @@ public class ProfileListFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getContext(), ProfileActivity.class);
-                Profil
+                Profile mProfile = (Profile) profileAdapter.getItem(position);
+                intent.putExtra("SELECTED_PROFILE", mProfile);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+   
