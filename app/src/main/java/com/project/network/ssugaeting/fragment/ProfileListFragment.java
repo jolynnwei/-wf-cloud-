@@ -67,4 +67,9 @@ public class ProfileListFragment extends Fragment {
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
-   
+        });
+
+        View view = binding.getRoot();
+        return view;
+    }
+}
