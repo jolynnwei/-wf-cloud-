@@ -172,3 +172,8 @@ public class FTPConnection {
             fis.close();
         } catch (Exception e) {
             Log.d(TAG, e.getMessage());
+            Log.d(TAG, "Couldn't upload the file");
+        }
+        return result;
+    }
+}
