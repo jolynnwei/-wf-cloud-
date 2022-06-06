@@ -66,4 +66,16 @@ public class Chat implements Parcelable, Serializable {
         return sendImageURI;
     }
 
-    public 
+    public void setSendImageURI(String sendImageURI) {
+        this.sendImageURI = sendImageURI;
+    }
+
+    public String getMsgTime() {
+        return msgTime;
+    }
+
+    public void setMsgTime(String msgTime) {
+        this.msgTime = msgTime;
+    }
+
+    public
