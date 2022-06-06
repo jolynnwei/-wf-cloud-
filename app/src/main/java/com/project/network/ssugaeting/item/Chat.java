@@ -15,4 +15,11 @@ public class Chat implements Parcelable, Serializable {
     private String msgTime;
     private int msgTurn;
 
-    public Chat(
+    public Chat(String sendMsg, String sendImageURI, String msgTime, int msgTurn) {
+        this.sendMsg = sendMsg;
+        this.sendImageURI = sendImageURI;
+        this.msgTime = msgTime;
+        this.msgTurn = msgTurn;
+    }
+
+    protected Chat(Parcel 
