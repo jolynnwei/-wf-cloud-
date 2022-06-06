@@ -42,4 +42,13 @@ public class Chat implements Parcelable, Serializable {
     };
 
     @Override
-    public int describeCon
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(sendMsg);
+        dest.writeString(sendImageURI);
+        dest.writeString(msgTime);
+        dest.writeI
