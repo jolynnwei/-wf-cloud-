@@ -22,4 +22,12 @@ public class Chat implements Parcelable, Serializable {
         this.msgTurn = msgTurn;
     }
 
-    protected Chat(Parcel 
+    protected Chat(Parcel in) {
+        sendMsg = in.readString();
+        sendImageURI = in.readString();
+        msgTime = in.readString();
+        msgTurn = in.readInt();
+    }
+
+    public static final Creator<Chat> CREATOR = new Creator<Chat>() {
+        @Override
