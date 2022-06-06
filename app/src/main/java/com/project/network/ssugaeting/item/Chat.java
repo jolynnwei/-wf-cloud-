@@ -51,4 +51,19 @@ public class Chat implements Parcelable, Serializable {
         dest.writeString(sendMsg);
         dest.writeString(sendImageURI);
         dest.writeString(msgTime);
-        dest.writeI
+        dest.writeInt(msgTurn);
+    }
+
+    public String getSendMsg() {
+        return sendMsg;
+    }
+
+    public void setSendMsg(String sendMsg) {
+        this.sendMsg = sendMsg;
+    }
+
+    public String getSendImageURI() {
+        return sendImageURI;
+    }
+
+    public 
