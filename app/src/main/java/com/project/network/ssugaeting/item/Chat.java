@@ -31,3 +31,15 @@ public class Chat implements Parcelable, Serializable {
 
     public static final Creator<Chat> CREATOR = new Creator<Chat>() {
         @Override
+        public Chat createFromParcel(Parcel in) {
+            return new Chat(in);
+        }
+
+        @Override
+        public Chat[] newArray(int size) {
+            return new Chat[size];
+        }
+    };
+
+    @Override
+    public int describeCon
