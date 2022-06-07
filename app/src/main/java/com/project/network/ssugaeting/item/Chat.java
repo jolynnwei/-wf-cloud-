@@ -78,4 +78,11 @@ public class Chat implements Parcelable, Serializable {
         this.msgTime = msgTime;
     }
 
-    public
+    public int getMsgTurn() {
+        return msgTurn;
+    }
+
+    public void setMsgTurn(int msgTurn) {
+        this.msgTurn = msgTurn;
+    }
+}
