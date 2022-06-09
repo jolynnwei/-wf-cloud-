@@ -15,4 +15,11 @@ public class ChatRoom implements Parcelable {
     private Profile profile;
     private int unCheckMsgCnt;
 
-    public ChatRoom(A
+    public ChatRoom(ArrayList<Chat> chatList, Profile profile, int unCheckMsgCnt) {
+        this.chatList = chatList;
+        this.profile = profile;
+        this.unCheckMsgCnt = unCheckMsgCnt;
+    }
+
+    protected ChatRoom(Parcel in) {
+        chatList = in.createTypedArrayList(Chat.CREATOR)
