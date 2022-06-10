@@ -22,4 +22,11 @@ public class ChatRoom implements Parcelable {
     }
 
     protected ChatRoom(Parcel in) {
-        chatList = in.createTypedArrayList(Chat.CREATOR)
+        chatList = in.createTypedArrayList(Chat.CREATOR);
+        profile = in.readParcelable(Profile.class.getClassLoader());
+        unCheckMsgCnt = in.readInt();
+    }
+
+    public static final Creator<ChatRoom> CREATOR = new Creator<ChatRoom>() {
+        @Override
+        public ChatRoom createFromParcel(Parcel in) {
