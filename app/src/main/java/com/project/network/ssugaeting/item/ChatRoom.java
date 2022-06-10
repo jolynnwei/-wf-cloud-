@@ -30,3 +30,19 @@ public class ChatRoom implements Parcelable {
     public static final Creator<ChatRoom> CREATOR = new Creator<ChatRoom>() {
         @Override
         public ChatRoom createFromParcel(Parcel in) {
+            return new ChatRoom(in);
+        }
+
+        @Override
+        public ChatRoom[] newArray(int size) {
+            return new ChatRoom[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    publ
