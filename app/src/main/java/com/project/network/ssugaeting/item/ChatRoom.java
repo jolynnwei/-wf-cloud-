@@ -64,4 +64,14 @@ public class ChatRoom implements Parcelable {
     }
 
     public void setProfile(Profile profile) {
- 
+        this.profile = profile;
+    }
+
+    public int getUnCheckMsgCnt() {
+        return unCheckMsgCnt;
+    }
+
+    public void setUnCheckMsgCnt(int unCheckMsgCnt) {
+        this.unCheckMsgCnt = unCheckMsgCnt;
+    }
+}
