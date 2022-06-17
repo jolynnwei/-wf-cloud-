@@ -45,4 +45,11 @@ public class ChatRoom implements Parcelable {
     }
 
     @Override
-    publ
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeTypedList(chatList);
+        dest.writeParcelable(profile, flags);
+        dest.writeInt(unCheckMsgCnt);
+    }
+
+    public ArrayList<Chat> getChatList() {
+        return
