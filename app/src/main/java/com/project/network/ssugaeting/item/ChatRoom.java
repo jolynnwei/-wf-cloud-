@@ -52,4 +52,16 @@ public class ChatRoom implements Parcelable {
     }
 
     public ArrayList<Chat> getChatList() {
-        return
+        return chatList;
+    }
+
+    public void setChatList(ArrayList<Chat> chatList) {
+        this.chatList = chatList;
+    }
+
+    public Profile getProfile() {
+        return profile;
+    }
+
+    public void setProfile(Profile profile) {
+ 
