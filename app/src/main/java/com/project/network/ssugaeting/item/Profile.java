@@ -21,3 +21,12 @@ public class Profile implements Parcelable {
     private String address;
     private String hobby;
     private String college;
+    private String major;
+    private String imageURI;
+    private String religion;
+    private String circle;
+    private String abroadExperience;
+    private String militaryStatus;
+
+    // Constructor of Essential Information
+    public Profile(String id, String pas
