@@ -11,4 +11,13 @@ public class Profile implements Parcelable {
     // Essential Information
     private String id;
     private String password;
-    private 
+    private String email;
+    private String name;
+    private String sex;
+    // Additional Information
+    private String stateMsg;
+    private String age;
+    private String height;
+    private String address;
+    private String hobby;
+    private String college;
