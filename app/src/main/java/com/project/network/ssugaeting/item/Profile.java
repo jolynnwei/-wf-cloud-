@@ -29,4 +29,12 @@ public class Profile implements Parcelable {
     private String militaryStatus;
 
     // Constructor of Essential Information
-    public Profile(String id, String pas
+    public Profile(String id, String password, String email, String name, String sex) {
+        this.id = id;
+        this.password = password;
+        this.email = email;
+        this.name = name;
+        this.sex = sex;
+    }
+
+    public Profile(String id, String password, String email, String
