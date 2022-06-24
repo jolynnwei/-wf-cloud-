@@ -38,4 +38,13 @@ public class Profile implements Parcelable {
     }
 
     public Profile(String id, String password, String email, String name, String sex, String stateMsg, String age, String height, String address, String hobby, String college, String major, String imageURI, String religion, String circle, String abroadExperience, String militaryStatus) {
-        this.id = i
+        this.id = id;
+        this.password = password;
+        this.email = email;
+        this.name = name;
+        this.sex = sex;
+        this.stateMsg = stateMsg;
+        this.age = age;
+        this.height = height;
+        this.address = address;
+        th
