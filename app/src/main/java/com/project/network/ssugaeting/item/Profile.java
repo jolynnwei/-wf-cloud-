@@ -47,4 +47,11 @@ public class Profile implements Parcelable {
         this.age = age;
         this.height = height;
         this.address = address;
-        th
+        this.hobby = hobby;
+        this.college = college;
+        this.major = major;
+        this.imageURI = imageURI;
+        this.religion = religion;
+        this.circle = circle;
+        this.abroadExperience = abroadExperience;
+        this
