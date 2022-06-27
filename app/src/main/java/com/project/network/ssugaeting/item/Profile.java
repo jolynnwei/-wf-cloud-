@@ -64,4 +64,11 @@ public class Profile implements Parcelable {
         email = in.readString();
         name = in.readString();
         sex = in.readString();
-        stateMsg = in.readString(
+        stateMsg = in.readString();
+        age = in.readString();
+        height = in.readString();
+        address = in.readString();
+        hobby = in.readString();
+        college = in.readString();
+        major = in.readString();
+        imageURI = in
