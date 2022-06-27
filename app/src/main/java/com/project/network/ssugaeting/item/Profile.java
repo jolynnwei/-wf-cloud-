@@ -54,4 +54,14 @@ public class Profile implements Parcelable {
         this.religion = religion;
         this.circle = circle;
         this.abroadExperience = abroadExperience;
-        this
+        this.militaryStatus = militaryStatus;
+    }
+
+
+    protected Profile(Parcel in) {
+        id = in.readString();
+        password = in.readString();
+        email = in.readString();
+        name = in.readString();
+        sex = in.readString();
+        stateMsg = in.readString(
