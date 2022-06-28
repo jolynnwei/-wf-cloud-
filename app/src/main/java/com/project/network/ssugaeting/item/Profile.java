@@ -103,4 +103,17 @@ public class Profile implements Parcelable {
     }
 
     public void setName(String name) {
-        this.name = n
+        this.name = name;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public void setStateMsg(String stateMsg) {
+        this.stateMsg = stateMsg;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    
