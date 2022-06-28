@@ -71,4 +71,11 @@ public class Profile implements Parcelable {
         hobby = in.readString();
         college = in.readString();
         major = in.readString();
-        imageURI = in
+        imageURI = in.readString();
+        religion = in.readString();
+        circle = in.readString();
+        abroadExperience = in.readString();
+        militaryStatus = in.readString();
+    }
+
+    public static final Creator<Profile> CREATOR = n
