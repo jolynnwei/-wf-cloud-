@@ -90,4 +90,17 @@ public class Profile implements Parcelable {
         }
     };
 
-    pub
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setName(String name) {
+        this.name = n
