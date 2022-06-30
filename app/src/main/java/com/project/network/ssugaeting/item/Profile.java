@@ -116,4 +116,18 @@ public class Profile implements Parcelable {
 
     public void setAge(String age) {
         this.age = age;
-    
+    }
+
+    public void setHeight(String height) {
+        this.height = height;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setHobby(String hobby) {
+        this.hobby = hobby;
+    }
+
+    public void s
