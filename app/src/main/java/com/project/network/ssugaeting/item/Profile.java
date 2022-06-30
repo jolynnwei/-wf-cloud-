@@ -130,4 +130,16 @@ public class Profile implements Parcelable {
         this.hobby = hobby;
     }
 
-    public void s
+    public void setCollege(String college) {
+        this.college = college;
+    }
+
+    public void setMajor(String major) {
+        this.major = major;
+    }
+
+    public void setImageURI(String imageURI) {
+        this.imageURI = imageURI;
+    }
+
+    public void setRelig
