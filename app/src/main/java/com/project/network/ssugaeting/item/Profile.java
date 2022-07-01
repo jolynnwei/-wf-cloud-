@@ -142,4 +142,13 @@ public class Profile implements Parcelable {
         this.imageURI = imageURI;
     }
 
-    public void setRelig
+    public void setReligion(String religion) {
+        this.religion = religion;
+    }
+
+    public void setCircle(String circle) {
+        this.circle = circle;
+    }
+
+    public void setAbroadExperience(String abroadExperience) {
+        this.abroadExperience = abroadExperience;
