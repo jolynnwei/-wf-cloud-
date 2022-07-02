@@ -152,3 +152,18 @@ public class Profile implements Parcelable {
 
     public void setAbroadExperience(String abroadExperience) {
         this.abroadExperience = abroadExperience;
+    }
+
+    public void setMilitaryStatus(String militaryStatus) {
+        this.militaryStatus = militaryStatus;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public St
