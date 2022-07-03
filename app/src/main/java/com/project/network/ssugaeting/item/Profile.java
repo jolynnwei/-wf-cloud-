@@ -166,4 +166,21 @@ public class Profile implements Parcelable {
         return password;
     }
 
-    public St
+    public String getEmail() {
+        return email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public String getStateMsg() {
+        return stateMsg;
+    }
+
+    public String getAge() {
+        r
