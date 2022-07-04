@@ -183,4 +183,19 @@ public class Profile implements Parcelable {
     }
 
     public String getAge() {
-        r
+        return age;
+    }
+
+    public String getHeight() {
+        return height;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getHobby() {
+        return hobby;
+    }
+
+    public String getCollege
