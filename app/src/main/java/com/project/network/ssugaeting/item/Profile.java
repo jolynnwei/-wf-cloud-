@@ -198,4 +198,21 @@ public class Profile implements Parcelable {
         return hobby;
     }
 
-    public String getCollege
+    public String getCollege() {
+        return college;
+    }
+
+    public String getMajor() {
+        return major;
+    }
+
+    public String getImageURI() {
+        return imageURI;
+    }
+
+    public String getReligion() {
+        return religion;
+    }
+
+    public String getCircle() {
+        re
