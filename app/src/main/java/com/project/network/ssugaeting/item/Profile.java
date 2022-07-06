@@ -230,3 +230,12 @@ public class Profile implements Parcelable {
     public int describeContents() {
         return 0;
     }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(id);
+        dest.writeString(password);
+        dest.writeString(email);
+        dest.writeString(name);
+        dest.writeString(sex);
+        dest.writeString(s
