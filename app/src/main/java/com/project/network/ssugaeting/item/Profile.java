@@ -215,4 +215,18 @@ public class Profile implements Parcelable {
     }
 
     public String getCircle() {
-        re
+        return circle;
+    }
+
+    public String getAbroadExperience() {
+        return abroadExperience;
+    }
+
+    public String getMilitaryStatus() {
+        return militaryStatus;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
