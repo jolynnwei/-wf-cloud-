@@ -238,4 +238,12 @@ public class Profile implements Parcelable {
         dest.writeString(email);
         dest.writeString(name);
         dest.writeString(sex);
-        dest.writeString(s
+        dest.writeString(stateMsg);
+        dest.writeString(age);
+        dest.writeString(height);
+        dest.writeString(address);
+        dest.writeString(hobby);
+        dest.writeString(college);
+        dest.writeString(major);
+        dest.writeString(imageURI);
+        de
