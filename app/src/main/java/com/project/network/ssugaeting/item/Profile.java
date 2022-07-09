@@ -246,4 +246,9 @@ public class Profile implements Parcelable {
         dest.writeString(college);
         dest.writeString(major);
         dest.writeString(imageURI);
-        de
+        dest.writeString(religion);
+        dest.writeString(circle);
+        dest.writeString(abroadExperience);
+        dest.writeString(militaryStatus);
+    }
+}
