@@ -18,4 +18,12 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:paddingTop="16dp"
-                android:text="@string/filter_info
+                android:text="@string/filter_info"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+             
