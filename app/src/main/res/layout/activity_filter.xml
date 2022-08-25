@@ -50,4 +50,10 @@
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_conte
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="부터" />
+
+                    <EditText
+                        android:id="@+id/et_filterAge_to"
+                        android:layout_
