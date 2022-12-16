@@ -152,4 +152,10 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:text="@string/user_hobby"
-                        android:textColor="@color/co
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_filterHobby"
+                        android:layout_width="match_parent"
+                        android
