@@ -237,4 +237,12 @@
                         android:textSize="18sp" />
 
                     <Spinner
-                        android:id="@+id/sp_filterAb
+                        android:id="@+id/sp_filterAbroadExperience"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_span="4" />
+
+                </TableRow>
+
+                <TextView
+            
