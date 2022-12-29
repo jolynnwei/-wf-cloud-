@@ -261,4 +261,9 @@
                         android:layout_gravity="center_horizontal"
                         android:text="@string/user_military_status"
                         android:textColor="@color/colorPrimaryDark"
-                        android:te
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_filterMilitaryStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_conten
