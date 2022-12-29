@@ -266,4 +266,14 @@
                     <Spinner
                         android:id="@+id/sp_filterMilitaryStatus"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_conten
+                        android:layout_height="wrap_content"
+                        android:layout_span="4" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                androi
