@@ -289,4 +289,11 @@
                     android:text="검색"
                     android:textColor="#ffffffff" />
 
-   
+                <Space
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btn_filterCancel"
+                    android:layout_width="120dp"
+       
