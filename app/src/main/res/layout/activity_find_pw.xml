@@ -2,7 +2,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.project.network.ssugaeting.activity.FindIdActivity">
+    tools:context="com.project.network.ssugaeting.activity.FindPwActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,12 +17,21 @@
             android:layout_marginBottom="24dp"
             android:layout_marginTop="24dp"
             android:gravity="center"
-            android:text="@string/search_id"
+            android:text="@string/search_pw"
             android:textSize="24sp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/et_findIdByEmail"
+            android:id="@+id/et_findPwById"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/user_id"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_findPwByEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -42,7 +51,7 @@
                 android:layout_height="match_parent">
 
                 <Button
-                    android:id="@+id/btn_findIdConfirm"
+                    android:id="@+id/btn_findPwConfirm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/confirm"
@@ -50,7 +59,7 @@
                     android:textStyle="bold" />
 
                 <Button
-                    android:id="@+id/btn_findIdCancel"
+                    android:id="@+id/btn_findPwCancel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/cancel"
