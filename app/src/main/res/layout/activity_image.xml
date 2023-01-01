@@ -9,4 +9,10 @@
         android:orientation="vertical">
 
         <ImageView
-            andro
+            android:id="@+id/iv_fullScreenImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</layout>
