@@ -27,4 +27,13 @@
 
             <ImageView
                 android:id="@+id/iv_appName"
-                android:layout_width="wrap_cont
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:src="@drawable/app_name" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        
