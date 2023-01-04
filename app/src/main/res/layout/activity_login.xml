@@ -44,4 +44,9 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <EditT
+                <EditText
+                    android:id="@+id/et_inputId"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textAutoComplete"
+                    android:hint="@str
