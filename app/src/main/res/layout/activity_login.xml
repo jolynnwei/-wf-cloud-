@@ -49,4 +49,11 @@
                     android:layout_width="220dp"
                     android:layout_height="wrap_content"
                     android:inputType="textAutoComplete"
-                    android:hint="@str
+                    android:hint="@string/user_id" />
+
+                <EditText
+                    android:id="@+id/et_inputPw"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint
