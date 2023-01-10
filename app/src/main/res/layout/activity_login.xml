@@ -80,4 +80,11 @@
             android:gravity="center">
 
             <TextView
-                android:
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_register"
+                android:text="@string/register"
+                android:textSize="18sp" />
+
+            <android.support.v4.widget.Space
+             
