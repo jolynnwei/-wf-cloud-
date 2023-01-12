@@ -94,4 +94,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_findId"
-       
+                android:text="@string/search_id"
+                android:textSize="18sp" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="24dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:
