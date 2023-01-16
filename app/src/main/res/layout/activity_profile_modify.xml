@@ -138,3 +138,187 @@
                     android:paddingTop="4dp">
 
                     <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/user_major"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_modifyMajor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/user_religion"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_modifyReligion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/user_hobby"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_modifyHobby"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/user_college"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_modifyCollege"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/user_circle"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_modifyCircle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/user_abroad_experience"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_modifyAbroadExperience"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/user_military_status"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_modifyMilitaryStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <Button
+                    android:id="@+id/btn_modifyComplete"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/button_shape"
+                    android:text="수정 완료"
+                    android:textColor="#ffffffff" />
+
+                <Space
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btn_modifyCancel"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/button_shape"
+                    android:text="@string/cancel"
+                    android:textColor="#ffffffff" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="36dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
