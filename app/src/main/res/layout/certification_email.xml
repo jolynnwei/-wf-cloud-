@@ -33,4 +33,14 @@
                 android:id="@+id/et_certNumber"
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/border_e
+                android:background="@drawable/border_et"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            an
