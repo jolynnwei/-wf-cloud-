@@ -55,4 +55,11 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_shape"
-             
+                android:text="@string/confirm"
+                android:textColor="#ffffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="24dp"
+                android:layout_heigh
