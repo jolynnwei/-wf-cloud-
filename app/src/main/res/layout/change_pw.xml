@@ -13,4 +13,14 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent
+            android:layout_height="match_parent"
+            android:text="새 비밀번호 설정"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="새로운 비밀번호를 입력해주세요" />
+
+
+        <a
