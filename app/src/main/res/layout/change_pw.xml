@@ -5,4 +5,12 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="56dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent
