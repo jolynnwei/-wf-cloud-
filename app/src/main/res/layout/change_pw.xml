@@ -48,4 +48,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="새 비밀번호 확인"
-                android:inputType="
+                android:inputType="textPassword" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp"
+            android:pad
