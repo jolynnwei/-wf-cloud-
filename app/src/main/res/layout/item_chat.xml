@@ -114,3 +114,129 @@
                     android:layout_gravity="center"
                     android:orientation="horizontal"
                     android:padding="8dp">
+
+                    <Button
+                        android:id="@+id/btn_reqAccept"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/button_shape"
+                        android:text="수락"
+                        android:textAppearance="?attr/textAppearanceListItem"
+                        android:textColor="#ffffffff"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="24dp"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/btn_reqReject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/button_shape"
+                        android:text="거절"
+                        android:textAppearance="?attr/textAppearanceListItem"
+                        android:textColor="#ffffffff"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_myChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:visibility="visible">
+
+            <!-- Text Message View -->
+            <TextView
+                android:id="@+id/tv_myChatMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/my_chat_shape"
+                android:maxWidth="270dp"
+                android:padding="8dp"
+                android:text="@string/chat_message"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textColor="@color/colorChar"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_myChatTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_myChatMsg"
+                android:layout_toLeftOf="@id/tv_myChatMsg"
+                android:paddingRight="4dp"
+                android:text="오후 12:00"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textColor="@color/colorChar"
+                android:textSize="10sp" />
+
+            <!-- Image Message View -->
+            <ImageView
+                android:id="@+id/iv_mySendImage"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_myImageTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/iv_mySendImage"
+                android:layout_toLeftOf="@id/iv_mySendImage"
+                android:paddingRight="4dp"
+                android:text="오후 12:00"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textColor="@color/colorChar"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_showDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/border_line" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018년 6월 8일 금요일"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/border_line" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>
