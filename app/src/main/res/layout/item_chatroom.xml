@@ -15,4 +15,11 @@
             android:src="@mipmap/ic_person_base" />
 
         <RelativeLayout
-            android:layo
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp">
+
+            <TextView
+                android:id="@+id/tv_chatName"
+                android:layout_width="wrap_content"
+                android:l
