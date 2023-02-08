@@ -33,4 +33,9 @@
                 android:id="@+id/tv_chatMsg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@id/tv_chatNa
+                android:layout_alignLeft="@id/tv_chatName"
+                android:layout_below="@id/tv_chatName"
+                android:layout_toLeftOf="@id/tv_chatCnt"
+                android:maxLines="2"
+                android:text="연결되지 않은 채팅방"
+                android:textAppearance="?attr/textAppearanceLi
