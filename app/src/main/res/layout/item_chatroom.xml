@@ -27,3 +27,10 @@
                 android:layout_alignParentTop="true"
                 android:text="@string/user_name"
                 android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_chatMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_chatNa
