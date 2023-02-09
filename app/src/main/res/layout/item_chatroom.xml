@@ -38,4 +38,11 @@
                 android:layout_toLeftOf="@id/tv_chatCnt"
                 android:maxLines="2"
                 android:text="연결되지 않은 채팅방"
-                android:textAppearance="?attr/textAppearanceLi
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textColor="#7e7e7e"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_chatTime"
+                android:layout_width="wrap_content"
+                android:layout_he
