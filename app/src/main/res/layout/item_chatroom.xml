@@ -62,4 +62,12 @@
                 android:layout_below="@id/tv_chatTime"
                 android:layout_margin="4dp"
                 android:background="@drawable/message_count"
-           
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#ffffffff" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>
