@@ -16,4 +16,9 @@
 
         <TextView
             android:id="@+id/tv_userName"
-            an
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="@string/user_name"
+            android:textAppearance="?attr/textAppearanceListItem"
+            
