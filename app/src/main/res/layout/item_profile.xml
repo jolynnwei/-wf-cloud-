@@ -28,4 +28,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-   
+            android:gravity="right"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/user_state_message"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textColor="#7e
