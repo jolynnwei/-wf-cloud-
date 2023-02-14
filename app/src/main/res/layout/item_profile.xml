@@ -21,4 +21,11 @@
             android:layout_marginLeft="16dp"
             android:text="@string/user_name"
             android:textAppearance="?attr/textAppearanceListItem"
-            
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_userStateMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+   
