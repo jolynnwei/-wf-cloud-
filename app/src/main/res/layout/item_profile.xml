@@ -33,4 +33,10 @@
             android:singleLine="true"
             android:text="@string/user_state_message"
             android:textAppearance="?attr/textAppearanceListItem"
-            android:textColor="#7e
+            android:textColor="#7e7e7e"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+</layout>
